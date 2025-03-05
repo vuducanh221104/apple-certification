@@ -1,0 +1,69 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 4rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: 70px;
+
+    .menu {
+        display: none;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: inherit; /* Logo chiếm toàn bộ chiều cao header */
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    padding-left: 3rem;
+    height: 100%;
+
+    a {
+        display: flex;
+        align-items: center;
+        height: 100%; /* Link chiếm toàn bộ chiều cao nav */
+        padding: 0 16px; /* Thêm padding để dễ bấm */
+        text-decoration: none;
+        color: black;
+        transition: background 0.3s;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: inherit; /* Actions chiếm toàn bộ chiều cao header */
+}
+
+/* 🌟 Responsive cho Mobile/Tablet */
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block; /* Chỉ hiển thị MenuIcon trên màn hình nhỏ hơn 768px */
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.open {
+        display: flex; /* Khi bấm MenuIcon thì hiện menu */
+    }
+}
