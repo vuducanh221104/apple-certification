@@ -2,68 +2,155 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 4rem;
+    padding: 17px 20px;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
     width: 100%;
     height: 70px;
-
-    .menu {
-        display: none;
-    }
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    left: 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    height: inherit; /* Logo chiếm toàn bộ chiều cao header */
 }
 
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+/* Thanh nav (ẩn mặc định) */
 .nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ẩn bên ngoài */
+    width: 100%;
+    height: 100vh;
+    background: white;
     display: flex;
-    gap: 20px;
-    padding-left: 3rem;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+/* Khi mở menu, trượt vào */
+.nav.open {
+    right: 0;
+}
+
+/* Overlay mờ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+/* Hiển thị overlay khi menu mở */
+.overlay.open {
+    display: block;
+}
+
+/* Nút đóng */
+.closeIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: var(--background);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    width: 100%;
 
     a {
-        display: flex;
-        align-items: center;
-        height: 100%; /* Link chiếm toàn bộ chiều cao nav */
-        padding: 0 16px; /* Thêm padding để dễ bấm */
         text-decoration: none;
         color: black;
-        transition: background 0.3s;
+        font-weight: 500;
+    }
+
+    /* Màu trang hiện tại */
+    a.active {
+        color: #2076f3;
+        font-weight: bold;
+        position: relative;
+    }
+
+    a.active::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
     }
 }
 
-.actions {
+/* Hành động */
+.action {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: inherit; /* Actions chiếm toàn bộ chiều cao header */
+    margin-top: 30px;
+    gap: 14px;
+    width: 100%;
+    border-top-width: medium;
+
+    button {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    .buy {
+        background: linear-gradient(90deg, #0cabeb, #2076f3);
+        color: white;
+    }
+
+    .login {
+        border: 1px solid #e7e7e7;
+        background: #f8f9fb;
+        color: black;
+    }
+
+    .language {
+        font-size: 22px;
+    }
 }
 
-/* 🌟 Responsive cho Mobile/Tablet */
+/* Mobile */
 @media (max-width: 768px) {
     .menuIcon {
-        display: block; /* Chỉ hiển thị MenuIcon trên màn hình nhỏ hơn 768px */
+        display: block;
+        cursor: pointer;
+        color: #000;
     }
 
-    .nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        display: none;
-        flex-direction: column;
-        text-align: center;
-        padding: 16px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav.open {
-        display: flex; /* Khi bấm MenuIcon thì hiện menu */
+    /* Khi menu mở, ẩn cuộn trang */
+    body.menu-open {
+        overflow: hidden;
     }
 }

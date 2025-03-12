@@ -1,0 +1,74 @@
+$primary-color: #1976d2;
+$gradient-bg: linear-gradient(to right, #007bff, #0056b3);
+
+.login-container {
+    display: flex;
+    height: 100vh; /* Chiếm toàn bộ chiều cao viewport */
+    overflow: hidden; /* Ngăn cuộn toàn bộ container */
+
+    .login-form {
+        flex: 0 0 45%; /* Chiếm 45% chiều rộng */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: #fff;
+        height: 100vh;
+        overflow-y: auto; /* Cho phép cuộn form đăng nhập */
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--background);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            color: #ccc;
+            margin: 20px 0;
+        }
+        .inputField {
+            width: 100%;
+            margin: 20px 0;
+
+            :global(.MuiOutlinedInput-root) {
+                border-radius: 0.75rem !important;
+            }
+        }
+    }
+
+    .login-image {
+        width: 55%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background: $gradient-bg;
+        color: white;
+        position: fixed; /* Cố định hình ảnh */
+        right: 0;
+        top: 0;
+
+        @media (max-width: 768px) {
+            display: none; /* Ẩn trên mobile */
+        }
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+
+        h6 {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        display: block; /* Hiển thị dạng block */
+    }
+}

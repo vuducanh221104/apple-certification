@@ -1,0 +1,86 @@
+.updates-section {
+    padding: 20px;
+}
+
+.updates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.see-more {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.updates-list {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.update-slide {
+    flex-shrink: 0; // Giữ nguyên kích thước khi kéo dài màn hình
+    width: auto; // Chiều rộng sẽ mở rộng theo màn hình
+}
+
+.update-item {
+    width: 70vw; // Chiếm 70% chiều rộng màn hình
+    max-width: 500px; // Giới hạn tối đa
+    margin-right: 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.update-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.update-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.update-icon {
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.update-text h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.update-text p {
+    font-size: 12px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Swiper tùy chỉnh */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+}
+
+@media screen and (min-width: 769px) {
+    .update-item {
+        margin-right: -45px;
+    }
+}
