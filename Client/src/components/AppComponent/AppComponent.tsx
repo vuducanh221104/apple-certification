@@ -65,7 +65,6 @@ const App: React.FC = () => {
                 current={current}
                 onChange={setCurrent}
                 showSizeChanger={false}
-                showQuickJumper
                 className={styles.pagination}
             />
         </div>

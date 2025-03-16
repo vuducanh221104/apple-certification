@@ -5,9 +5,11 @@ import styles from '../../../styles/Store.module.scss';
 
 import appBlur from '../../../assets/img/app_blur.png'; // Khai báo ảnh blur
 import Image from 'next/image';
-import { Container } from 'react-bootstrap';
 import { Input } from '@mui/material';
 import UpdatesSection from '@/components/Update/update';
+import FooterSecond from '@/components/FooterSecond/FooterSecond';
+import AppList from '@/components/AppList/AppList';
+import AppSingleList from '@/components/AppSingleList/AppSingleList';
 
 const Banner: React.FC = () => {
     const router = useRouter();
@@ -18,7 +20,7 @@ const Banner: React.FC = () => {
     };
 
     return (
-        <Container fluid>
+        <div className={styles.container}>
             <div className={styles.banner}>
                 <Image src={appBlur} alt="App Blur" layout="responsive" />
                 <div className={styles.content}>
@@ -32,10 +34,13 @@ const Banner: React.FC = () => {
             </div>
             {/* Update in Store */}
             <UpdatesSection />
-            {/* App-2 */}
-
-            {/* App-3 */}
-        </Container>
+            {/* AppList-1 */}
+            <AppList />
+            {/* AppList-2 */}
+            <AppSingleList />
+            {/* Footer */}
+            <FooterSecond />
+        </div>
         //
     );
 };

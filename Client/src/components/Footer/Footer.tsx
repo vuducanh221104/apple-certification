@@ -22,17 +22,17 @@ export default function Footer() {
             <div className={styles.supportLinks}>
                 <Link href="https://facebook.com" target="_blank" className={styles.card}>
                     <Image src={fb} alt="Facebook" width={40} height={40} />
-                    <span>UnKeyApp Facebook Support</span>
+                    <p>UnKeyApp Facebook Support</p>
                 </Link>
 
                 <Link href="https://t.me" target="_blank" className={styles.card}>
                     <Image src={telegram} alt="Telegram" width={40} height={40} />
-                    <span>UnKeyApp Telegram Support</span>
+                    <p>UnKeyApp Telegram Support</p>
                 </Link>
 
                 <Link href="https://x.com" target="_blank" className={styles.card}>
                     <Image src={x} alt="X" width={40} height={40} />
-                    <span>UnKeyApp X Support</span>
+                    <p>UnKeyApp X Support</p>
                 </Link>
             </div>
 

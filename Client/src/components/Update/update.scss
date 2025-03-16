@@ -1,5 +1,6 @@
 .updates-section {
     padding: 20px;
+    margin-top: 40px;
 }
 
 .updates-header {
@@ -23,13 +24,13 @@
 
 .update-slide {
     flex-shrink: 0; // Giữ nguyên kích thước khi kéo dài màn hình
-    width: auto; // Chiều rộng sẽ mở rộng theo màn hình
+    width: 100%;
+    margin-right: 20px;
 }
 
 .update-item {
-    width: 70vw; // Chiếm 70% chiều rộng màn hình
-    max-width: 500px; // Giới hạn tối đa
-    margin-right: 10px;
+    width: 100%;
+    margin-right: 20px;
     border-radius: 16px;
     overflow: hidden;
     background: black;
@@ -79,8 +80,13 @@
     background: white !important;
 }
 
-@media screen and (min-width: 769px) {
+@media (min-width: 769px) {
     .update-item {
         margin-right: -45px;
+    }
+}
+
+@media (min-width: 640px) {
+    .update-slide {
     }
 }

@@ -81,7 +81,6 @@
     flex-direction: column;
     gap: 30px;
     font-size: 20px;
-    margin-top: 40px;
     width: 100%;
 
     a {
@@ -138,6 +137,48 @@
 
     .language {
         font-size: 22px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .nav {
+        position: static; /* Trả về vị trí mặc định */
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        background: transparent;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .link {
+        flex-direction: row;
+        gap: 15px;
+
+        strong {
+            display: none;
+        }
+    }
+
+    .action {
+        flex-direction: row;
+        border-top: none;
+        margin-top: 0;
+        width: auto;
+
+        button {
+            width: max-content;
+        }
+    }
+
+    .menuIcon,
+    .overlay,
+    .closeIcon {
+        display: none; /* Ẩn icon menu và overlay */
     }
 }
 

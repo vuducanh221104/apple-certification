@@ -51,7 +51,7 @@ const updates: Update[] = [
 const UpdatesSection: React.FC = () => {
     const router = useRouter();
 
-    const handClick = () => {
+    const handleClick = () => {
         router.push('/store/moreUpdate');
     };
 
@@ -59,7 +59,7 @@ const UpdatesSection: React.FC = () => {
         <div className="updates-section">
             <div className="updates-header">
                 <h2>Mới cập nhật</h2>
-                <button className="see-more" onClick={handClick}>
+                <button className="see-more" onClick={handleClick}>
                     <span>Xem thêm &gt;</span>
                 </button>
             </div>

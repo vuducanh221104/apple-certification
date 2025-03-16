@@ -63,7 +63,7 @@ export default function Header() {
                         Kiểm tra đơn hàng
                     </Link>
                     <Link href="/history" className={pathname === '/history' ? styles.active : ''}>
-                        Lịch sử mua hàng
+                        <strong>Lịch sử mua hàng</strong>
                     </Link>
                     <Link href="/store" className={pathname === '/store' ? styles.active : ''}>
                         Kho ứng dụng
