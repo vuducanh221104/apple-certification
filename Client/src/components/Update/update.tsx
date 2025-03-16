@@ -17,11 +17,11 @@ interface Update {
     description: string;
 }
 
-const updates: Update[] = [
+const updates: Update[] = [ 
     {
         id: 1,
-        img: '/img/image1.jpg',
-        icon: '/img/icon1.png',
+        img: 'img/update.png',
+        icon: '/imgApp/pubg.jpg',
         title: 'Mob Control',
         description: 'com.vi... • 2.84.2 • 199.79 MB',
     },
@@ -80,7 +80,7 @@ const UpdatesSection: React.FC = () => {
                     <SwiperSlide key={update.id} className="update-slide">
                         <div className="update-item">
                             <Image
-                                src={update.img}
+                                src={`/imgApp/Update.jpeg`}
                                 alt={update.title}
                                 className="update-image"
                                 width={450}

@@ -1,3 +1,5 @@
+
+
 .banner {
     background: linear-gradient(to right, #4facfe, #3af89d);
     border-radius: 1.5rem;
@@ -5,11 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     text-align: center;
     position: relative;
-    margin-top: 20px;
-    padding: 0;
+    margin: 20px 20px;
 }
 
 .content {
@@ -42,4 +42,10 @@
     }
 }
 
-//
+// Moblie 
+@media (max-width: 767px) {
+    .content {
+        gap: 2rem;
+        padding: 0 3rem;
+    }
+}

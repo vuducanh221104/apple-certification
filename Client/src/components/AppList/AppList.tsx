@@ -21,7 +21,7 @@ const apps: App[] = [
         package: 'com.burbn.instagram',
         version: '371.0.0',
         size: '181.30 MB',
-        icon: '/instagram.png',
+        icon: '/iconAppList/icon1.jpg',
     },
     {
         id: 2,
@@ -157,10 +157,10 @@ export default function AppList() {
                                     <div className={styles.info}>
                                         <h4>{app.name}</h4>
                                         <p className={styles.package}>{app.package}</p>
-                                    </div>
                                     <div className={styles.details}>
                                         <p>{app.version}</p>
                                         <p>{app.size}</p>
+                                    </div>
                                     </div>
                                 </div>
                             ))}

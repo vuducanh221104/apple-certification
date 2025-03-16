@@ -28,7 +28,7 @@ const Banner: React.FC = () => {
                     <Input
                         className={styles.input}
                         placeholder="Tìm kiếm"
-                        onFocus={handleFocus} // Khi nhấn vào ô input, chuyển đến /searchh
+                        onClick={handleFocus} // Khi nhấn vào ô input, chuyển đến /searchh
                     />
                 </div>
             </div>

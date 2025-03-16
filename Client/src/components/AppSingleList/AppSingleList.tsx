@@ -20,7 +20,7 @@ const apps: App[] = [
         package: 'com.burbn.instagram',
         version: '371.0.0',
         size: '181.30 MB',
-        icon: '/instagram.png',
+        icon: '/iconAppSingleList/icontest.jpg',
     },
     {
         id: 2,
@@ -38,6 +38,22 @@ const apps: App[] = [
         size: '137.48 MB',
         icon: '/snapchat.png',
     },
+    {
+        id: 4,
+        name: 'WhatsApp',
+        package: 'com.whatsapp',
+        version: '2.23.1.76',
+        size: '102.30 MB',
+        icon: '/whatsapp.png',
+    },
+    {   
+        id: 5,
+        name: 'Facebook',
+        package: 'com.facebook.katana',
+        version: '412.0.0.0.23',
+        size: '209.34 MB',
+        icon: '/facebook.png',
+    }
 ];
 
 export default function AppSingleList() {
