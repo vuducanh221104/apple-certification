@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import logo from '@/assets/img/logo.png';
+import images from '@/assets/images/index'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ export default function Header() {
             {/* Logo luôn hiển thị */}
             <div className={styles.logo}>
                 <Link href="/">
-                    <Image src={logo} alt="Logo" width={48} height={32} />
+                    <Image src={images.logo} alt="Logo" width={48} height={32} />
                 </Link>
             </div>
 

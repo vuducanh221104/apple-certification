@@ -1,0 +1,53 @@
+$blackColor: #000000 !default;
+$primary-color: #3498db !default;
+$whiteColor: #ffffff !default;
+$greenColor: #30e764 !default;
+$grayColor: #848484 !default;
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/font/HarmonyOS_Sans_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/font/HarmonyOS_Sans_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-harmonyos: "HarmonyOS Sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --whitegroud: #ffffff;
+  }
+}
+
+body {
+  font-family: "HarmonyOS", sans-serif;
+}
+
+:global(a) {
+  text-decoration: none !important;
+  color: var(--grayColor);
+  font-size: 14px;
+
+  &:hover {
+    color: var(--primaryColor);
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+    text-decoration: none !important; 
+  }
+}

@@ -1,87 +1,114 @@
 .container {
-    background: white;
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
+  background: white;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
-        }
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 
-        .viewMore {
-            font-size: 14px;
-            color: #2076f3;
-            cursor: pointer;
-            text-decoration: none;
+  .listWrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .appItem {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    width: 150px;
+    height: auto;
+    text-align: center;
+
+    .appContent {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; // Đảm bảo nội dung không tràn ra ngoài
+      text-overflow: ellipsis; // Thêm dấu "..."
+      white-space: nowrap; // Ngăn ngừa xuống dòng
+      max-width: 120px;
+      text-align: left;
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      p {
+        margin: 0;
+      }
     }
 
-    .listWrapper {
-        overflow-x: auto;
+    &:hover {
+      background: #ececec;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    .info h4,
+    .info .package {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%; // Giúp giới hạn chiều dài
+    }
+
+    .info {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      h4 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+
+      .package {
+        font-size: 12px;
+        color: gray;
+      }
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 12px;
+      color: gray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+
+      .version , .size {
+        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        flex: 1; /* Chia đều không gian giữa version và size */
+      }
     }
-
-    .list {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-    }
-
-    .appItem {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: #f9f9f9;
-        padding: 10px;
-        border-radius: 8px;
-        transition: 0.3s ease-in-out;
-        width: 150px;
-        height: auto;
-        text-align: center;
-
-        &:hover {
-            background: #ececec;
-        }
-
-        img {
-            border-radius: 10px;
-        }
-
-        .info {
-            margin-top: 10px;
-
-            h4 {
-                font-size: 14px;
-                font-weight: bold;
-                margin-bottom: 2px;
-            }
-
-            .package {
-                font-size: 12px;
-                color: gray;
-            }
-        }
-
-        .details {
-            font-size: 12px;
-            color: gray;
-        }
-    }
+  }
 }

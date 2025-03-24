@@ -5,7 +5,7 @@ import FooterSecond from '@/components/FooterSecond/FooterSecond';
 const App: React.FC = () => {
     return (
         <div>
-            <h2>Update</h2>
+            <h2 style={{fontSize: '24px', fontWeight: '600', padding: '20px 20px 0 '}}>MoreApp</h2>
             <AppComponent />
             <FooterSecond />
         </div>

@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import styles from './AppList.module.scss';
-import { useRouter } from 'next/navigation';
+import '@/styles/Global.module.scss'
+import Link from 'next/link';
 
 // Định nghĩa kiểu dữ liệu của ứng dụng
 interface App {
@@ -17,11 +18,11 @@ interface App {
 const apps: App[] = [
     {
         id: 1,
-        name: 'Instagram',
-        package: 'com.burbn.instagram',
-        version: '371.0.0',
-        size: '181.30 MB',
-        icon: '/iconAppList/icon1.jpg',
+        name: 'Instagrammmmmmmmmmmmmmmmmmmmmmmmmm',
+        package: 'com.burbn.instagrammmmmmmmm,mm......,mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm',
+        version: '371.0.00000.000000000.000000.0000000.00000',
+        size: '181.300000000000000000000000000000 MB',
+        icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/44/26/b9/4426b92e-26df-658d-415c-01a0b48bdbc0/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg',
     },
     {
         id: 2,
@@ -29,7 +30,7 @@ const apps: App[] = [
         package: 'com.quvideo.XiaoYing',
         version: '9.25.1',
         size: '111.93 MB',
-        icon: '/vivavideo.png',
+        icon: '/iconAppList/icon1.jpg',
     },
     {
         id: 3,
@@ -37,7 +38,7 @@ const apps: App[] = [
         package: 'com.toyopagroup.picaboo',
         version: '13.31.0.47',
         size: '137.48 MB',
-        icon: '/snapchat.png',
+        icon: '/iconAppList/icon1.jpg',
     },
     {
         id: 4,
@@ -130,7 +131,6 @@ const apps: App[] = [
 ];
 
 export default function AppList() {
-    const router = useRouter();
 
     // Chia danh sách thành từng nhóm 3 ứng dụng
     const chunkedApps: App[][] = [];
@@ -142,9 +142,9 @@ export default function AppList() {
         <div className={styles.container}>
             <div className={styles.header}>
                 <h3>Mạng xã hội</h3>
-                <button onClick={() => router.push('/store/socialApp')} className={styles.viewMore}>
+                <Link href={`/store/moreApp`} className={styles.viewMore}>
                     Xem thêm &gt;
-                </button>
+                </Link>
             </div>
 
             <div className={styles.listWrapper}>
@@ -152,17 +152,17 @@ export default function AppList() {
                     {chunkedApps.map((group, index) => (
                         <div key={index} className={styles.column}>
                             {group.map((app) => (
-                                <div key={app.id} className={styles.appItem}>
-                                    <Image src={app.icon} alt={app.name} width={50} height={50} />
+                                <Link href={`/store/slug`} key={app.id} className={styles.appItem}>
+                                    <Image src='https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/35/d0/97/35d09708-4888-fa32-465b-43e428dbabda/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg' alt={app.name} width={64} height={64} />
                                     <div className={styles.info}>
                                         <h4>{app.name}</h4>
                                         <p className={styles.package}>{app.package}</p>
-                                    <div className={styles.details}>
-                                        <p>{app.version}</p>
-                                        <p>{app.size}</p>
+                                        <div className={styles.details}>
+                                            <p>{app.version}</p>
+                                            <p>{app.size}</p>
+                                        </div>
                                     </div>
-                                    </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     ))}

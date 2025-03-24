@@ -4,9 +4,8 @@ import { useState } from 'react';
 import { TextField, Button, Checkbox, FormControlLabel, Typography, Box, Divider } from '@mui/material';
 import { Google as GoogleIcon } from '@mui/icons-material';
 import Image from 'next/image';
-import bgPhone from '@/assets/img/bg_phone_vi.png';
 import Link from 'next/link';
-import styles from '../../../styles/LoginPage.module.scss';
+import styles from '@/styles/LoginPage.module.scss';
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
@@ -64,7 +63,7 @@ export default function LoginPage() {
 
             {/* Hình ảnh cố định, không bị cuộn */}
             <Box className={styles['login-image']}>
-                <Image src={bgPhone} alt="App Preview" />
+                <Image src='https://www.unkeyapp.com/images/bg_phone_vi.png' layout='fill' objectFit='contain' alt="App Preview" />
             </Box>
         </Box>
     );

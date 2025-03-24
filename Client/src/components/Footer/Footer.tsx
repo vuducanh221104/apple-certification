@@ -1,18 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import images from '@/assets/images/index';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import logo from '@/assets/img/logo.png';
-import fb from '@/assets/img/fb.png';
-import telegram from '@/assets/img/telegram.png';
-import x from '@/assets/img/x.png';
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.logo}>
-                <Image src={logo} alt="Logo" width={92} height={64} />
+                <Image src={images.logo} alt="Logo" width={92} height={64} />
             </div>
 
             <p className={styles.description}>
@@ -21,17 +18,17 @@ export default function Footer() {
 
             <div className={styles.supportLinks}>
                 <Link href="https://facebook.com" target="_blank" className={styles.card}>
-                    <Image src={fb} alt="Facebook" width={40} height={40} />
+                    <Image src='https://www.unkeyapp.com/_next/image?url=%2Ficon%2Ffb.png&w=96&q=75' alt="Facebook" width={40} height={40} />
                     <p>UnKeyApp Facebook Support</p>
                 </Link>
 
                 <Link href="https://t.me" target="_blank" className={styles.card}>
-                    <Image src={telegram} alt="Telegram" width={40} height={40} />
+                    <Image src='https://www.unkeyapp.com/_next/image?url=%2Ficon%2Ftelegram.png&w=96&q=75' alt="Telegram" width={40} height={40} />
                     <p>UnKeyApp Telegram Support</p>
                 </Link>
 
                 <Link href="https://x.com" target="_blank" className={styles.card}>
-                    <Image src={x} alt="X" width={40} height={40} />
+                    <Image src='https://www.unkeyapp.com/_next/image?url=%2Ficon%2Fx.png&w=96&q=75' alt="X" width={40} height={40} />
                     <p>UnKeyApp X Support</p>
                 </Link>
             </div>

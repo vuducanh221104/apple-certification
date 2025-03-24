@@ -15,6 +15,7 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
         background-color: #fff;
         height: 100vh;
         overflow-y: auto; /* Cho phép cuộn form đăng nhập */
+       
 
         .title {
             font-size: 24px;
@@ -48,9 +49,10 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
         text-align: center;
         background: $gradient-bg;
         color: white;
-        position: fixed; /* Cố định hình ảnh */
+        position: fixed;
         right: 0;
         top: 0;
+        bottom: 0;
 
         @media (max-width: 768px) {
             display: none; /* Ẩn trên mobile */
