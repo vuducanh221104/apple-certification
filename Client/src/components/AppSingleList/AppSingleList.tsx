@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import styles from "./AppSingleList.module.scss";
-import '@/styles/Global.module.scss'
+import '@/styles/Global.scss'
 import Link from "next/link";
+import clsx from "clsx"
 
 interface App {
   id: number;
@@ -97,10 +98,14 @@ const apps: App[] = [
   }
 ];
 
-export default function AppSingleList() {
+interface AppSingleListProps {
+  className?: string;
+}
+
+export default function AppSingleList({ className }: AppSingleListProps) {
 
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, className)}>
       <div className={styles.header}>
         <h3>Game</h3>
         <Link

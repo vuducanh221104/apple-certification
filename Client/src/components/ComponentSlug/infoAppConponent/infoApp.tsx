@@ -58,7 +58,7 @@ const AppInfo = () => {
       </Row>
 
       {/* App Meta Info */}
-      <Row className={styles["meta-info"]} mt-4>
+      <Row className={styles["meta-info"]}>
         <Col xs={4} className={styles["meta-item"]}>
           <span>Đánh giá</span>
           <div className={styles.value}>

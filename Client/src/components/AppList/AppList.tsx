@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './AppList.module.scss';
-import '@/styles/Global.module.scss'
+import '@/styles/Global.scss'
 import Link from 'next/link';
 
 // Định nghĩa kiểu dữ liệu của ứng dụng

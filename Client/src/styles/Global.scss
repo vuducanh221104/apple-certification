@@ -1,8 +1,11 @@
-$blackColor: #000000 !default;
-$primary-color: #3498db !default;
-$whiteColor: #ffffff !default;
-$greenColor: #30e764 !default;
-$grayColor: #848484 !default;
+
+
+@font-face {
+  font-family: "HarmonyOS";
+  src: url("/font/HarmonyOS_Sans_Thin.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "HarmonyOS";
@@ -13,22 +16,30 @@ $grayColor: #848484 !default;
 
 @font-face {
   font-family: "HarmonyOS";
+  src: url("/font/HarmonyOS_Sans_Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonyOS";
   src: url("/font/HarmonyOS_Sans_Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blackColor: #000000;
+  --whiteColor: #ffffff;
+  --grayColor: #dedede;
+  --greenColor: #30e764;
+  --primaryColor: #4ba3df;
   --font-harmonyos: "HarmonyOS Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --whitegroud: #ffffff;
+    
   }
 }
 
@@ -36,9 +47,9 @@ body {
   font-family: "HarmonyOS", sans-serif;
 }
 
-:global(a) {
+a {
   text-decoration: none !important;
-  color: var(--grayColor);
+  color: var(--blackColor);
   font-size: 14px;
 
   &:hover {
@@ -48,6 +59,6 @@ body {
   &:focus {
     outline: none;
     border: none;
-    text-decoration: none !important; 
+    text-decoration: none !important;
   }
 }

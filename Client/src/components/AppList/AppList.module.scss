@@ -16,10 +16,9 @@
 
     .viewMore {
       font-size: 14px;
-      color: #2076f3;
+      color: var(--blackColor);
       cursor: pointer;
       text-decoration: none;
-      color: var(--grayColor);
 
       &:hover {
         text-decoration: underline;

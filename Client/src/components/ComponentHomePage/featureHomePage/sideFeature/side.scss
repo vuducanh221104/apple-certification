@@ -1,0 +1,231 @@
+.feature-black {
+  background-color: var(--blackColor);
+  color: white;
+
+  h3,
+  p,
+  button {
+    color: white;
+  }
+
+  button {
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      90deg,
+      #0cabeb,
+      #2076f3,
+      #2076f3,
+      #0cabeb
+    );
+  }
+}
+.feature-white {
+  background-color: var(--whiteColor);
+  color: black;
+
+  h3,
+  p {
+    color: black;
+  }
+  button {
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      90deg,
+      #0cabeb,
+      #2076f3,
+      #2076f3,
+      #0cabeb
+    );
+    color: white;
+  }
+}
+.feature-blue {
+  background-size: 300% 100%;
+  background-image: linear-gradient(90deg, #0cabeb, #2076f3, #2076f3, #0cabeb);
+
+  h3,
+  p {
+    color: white;
+  }
+
+  button {
+    background-color: white;
+    color: black;
+  }
+}
+.feature-white2 {
+  background-color: var(--whiteColor);
+
+  h3,
+  p {
+    color: black;
+  }
+
+  button {
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      90deg,
+      #0cabeb,
+      #2076f3,
+      #2076f3,
+      #0cabeb
+    );
+
+    color: white;
+  }
+}
+.feature-purple {
+  background-image: linear-gradient(to bottom, #969df9, #717bff);
+
+  h3,
+  p {
+    color: white;
+  }
+}
+
+//////
+
+.screenshot-carousel {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.655);
+  padding: 4rem 0;
+
+  .swiper-wrapper {
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .swiper-slide {
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+
+    img {
+      border-radius: 12px;
+      width: 85%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .feature-item {
+      border-radius: 1.5rem;
+    }
+
+    .feature-content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* ID lẻ: Ảnh trên, nội dung dưới */
+    .image-first {
+      .side-image {
+        order: 1;
+      }
+      .side-content {
+        order: 2;
+      }
+    }
+
+    /* ID chẵn: Nội dung trên, ảnh dưới */
+    .content-first {
+      .side-content {
+        order: 1;
+      }
+      .side-image {
+        order: 2;
+      }
+    }
+
+    .side-content {
+      color: var(--whitegroud);
+      text-align: left;
+      width: 100%;
+      padding: 20px;
+      font-weight: 500;
+      position: relative;
+
+// thẻ p bấm vào hiện ra thêm nội dung
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; // Giới hạn tối đa 3 dòng
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  p.expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+      .side-header {
+        display: flex;
+        padding: 10px 0;
+      }
+
+      .sideIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .custom-navigation {
+    display: flex;
+    justify-content: center; // Canh giữa theo chiều ngang
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; // Tạo khoảng cách giữa slider và nút
+
+    button {
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+  .custom-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+
+    button {
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}

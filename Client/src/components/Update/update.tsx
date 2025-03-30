@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./update.scss";
 import Link from "next/link";
-import '@/styles/Global.module.scss'
+import '@/styles/Global.scss'
 
 interface Update {
   id: number;

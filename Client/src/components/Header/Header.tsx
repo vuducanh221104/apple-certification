@@ -73,10 +73,10 @@ export default function Header() {
                 {/* Action button */}
                 <div className={styles.action}>
                     <span className={styles.language}>🇻🇳</span>
-                    <Button variant="contained" className={styles.buy} onClick={() => router.push('/login')}>
+                    <Button variant="contained" className={styles.buy} onClick={() => router.push('/auth/login')}>
                         MUA NGAY
                     </Button>
-                    <Button variant="outlined" className={styles.login} onClick={() => router.push('/login')}>
+                    <Button variant="outlined" className={styles.login} onClick={() => router.push('/auth/login')}>
                         ĐĂNG NHẬP
                     </Button>
                 </div>

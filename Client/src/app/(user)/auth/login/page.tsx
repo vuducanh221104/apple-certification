@@ -47,7 +47,7 @@ export default function LoginPage() {
                     Đăng nhập
                 </Button>
 
-                <Divider sx={{ width: '100%', my: 2 }}>Hoặc</Divider>
+                <Divider sx={{ width: '100%', my: 2 , fontSize: "14px" }}>Hoặc</Divider>
 
                 <Button variant="outlined" startIcon={<GoogleIcon />} className={styles['google-login']}>
                     Đăng nhập bằng Google
