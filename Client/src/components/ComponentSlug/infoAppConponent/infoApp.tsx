@@ -36,10 +36,10 @@ const AppInfo = () => {
           </div>
           <div className={styles.details}>
             <div className={styles.icon}>
-              <span>📱 {appData.version}</span>
+              <span className={styles.version}>📱 {appData.version}</span>
             </div>
             <div className={styles.icon}>
-              <span>📂 {appData.size}</span>
+              <span className={styles.size}>📂 {appData.size}</span>
             </div>
           </div>
         </div>
