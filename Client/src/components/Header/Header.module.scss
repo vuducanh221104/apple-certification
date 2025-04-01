@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 17px 20px;
-    background: white;
+    background: var(--whiteColor);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 70px;
@@ -11,6 +11,7 @@
     top: 0;
     z-index: 1000;
     left: 0;
+    border-bottom: 1px solid var(--grayColor);
 }
 
 .logo {
@@ -31,7 +32,7 @@
     right: -100%; /* Ẩn bên ngoài */
     width: 100%;
     height: 100vh;
-    background: white;
+    background: var(--whiteColor);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +57,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--blackColor);
     display: none;
     z-index: 1000;
 }
@@ -72,7 +73,7 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-    color: var(--background);
+    color: var(--blackColor);
     padding: 10px;
     border-radius: 8px;
     text-align: center;
@@ -87,13 +88,13 @@
 
     a {
         text-decoration: none;
-        color: black;
+        color: var(--blackColor);
         font-weight: 600;
     }
 
     /* Màu trang hiện tại */
     a.active {
-        color: #2076f3;
+        color: var(--primaryColor);
         font-weight: bold;
         position: relative;
     }
@@ -117,6 +118,7 @@
     gap: 14px;
     width: 100%;
     border-top-width: medium;
+    padding: 0 16px;
 
     button {
         width: 100%;
@@ -128,17 +130,20 @@
 
     .buy {
         background: linear-gradient(90deg, #0cabeb, #2076f3);
-        color: white;
+        color: var(--whiteColor);
     }
 
     .login {
         border: 1px solid #e7e7e7;
-        background: #f8f9fb;
-        color: black;
+        background: var(--whiteColor);
+        color: var(--blackColor);
     }
 
     .language {
         font-size: 22px;
+        border-top: 1px solid #ccc;
+    width: 100%;
+    padding: 10px 0;
     }
 }
 
@@ -191,21 +196,31 @@
 }
 
 
-/* Mobile */
-@media (max-width: 999px) {
 
-    .link {
-        padding-top: 70px;
+@media (max-width: 999px) {
+    .nav {
+        position: absolute;
+        top: 70px; /* Đẩy xuống dưới header */
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+    }
+
+    .nav.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
 
     .menuIcon {
         display: block;
         cursor: pointer;
         color: #000;
-    }
-
-    /* Khi menu mở, ẩn cuộn trang */
-    body.menu-open {
-        overflow: hidden;
+        font-size: 32px;
     }
 }
+

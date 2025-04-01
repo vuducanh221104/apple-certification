@@ -1,18 +1,5 @@
-export interface Feature {
-    text: string;
-    detail?: string;
-    included?: boolean;
-  }
-  
-  export interface ServicePlan {
-    title: string;
-    price: string;
-    device: string;
-    features1: Feature[];
-    features2: Feature[];
-    image: string;
-  }
-  
+// Importing necessary types
+import { ServicePlan } from "@/types/client";
   export const serviceData: ServicePlan[] = [
     {
       title: "VIP - Tặng 1 gói base - đổi 1 thiết bị",
@@ -54,7 +41,7 @@ export interface Feature {
           { text: "Cài đặt và nhân bản không giới hạn", included: true },
           { text: "Thao tác nhanh chóng", included: true },
         ],
-        image: "https://www.unkeyapp.com/images/service_vip.png",
+        image: "https://www.unkeyapp.com/images/service_diamond.png",
       },
       {
         title: "VIP - Tặng 1 gói base - đổi 1 thiết bị",
@@ -95,7 +82,7 @@ export interface Feature {
           { text: "Cài đặt và nhân bản không giới hạn", included: true },
           { text: "Thao tác nhanh chóng", included: true },
         ],
-        image: "https://www.unkeyapp.com/images/service_vip.png",
+        image: "https://www.unkeyapp.com/images/service_diamond.png",
       },
   ];
   

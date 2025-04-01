@@ -1,0 +1,26 @@
+.header {
+
+
+    .header__container {
+        text-align: center;
+        padding: 64px 16px 40px;
+
+        .header__title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--primaryColor);
+        }
+
+        .header__subtitle {
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+
+    .header__imageWrapper {
+        .header__image {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

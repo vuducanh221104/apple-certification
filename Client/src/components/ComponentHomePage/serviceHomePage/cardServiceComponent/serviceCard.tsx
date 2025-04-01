@@ -1,10 +1,38 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { serviceData, ServicePlan } from "./serviceData";
+import { serviceData } from "./serviceData";
+import { ServicePlan } from "@/types/client";
 import styles from "./styleService/serviceCard.module.scss";
 import Image from "next/image";
+import {
+  ClockCircleOutlined,
+  HourglassOutlined,
+  MobileOutlined,
+  SafetyOutlined,
+  GiftOutlined,
+  CrownOutlined,
+} from "@ant-design/icons";
+import Link from "next/link";
 
 const ServiceCards: React.FC = () => {
+  // Hàm trả về icon tương ứng
+  const getFeatureIcon = (featureText: string) => {
+    switch (featureText) {
+      case "Kích hoạt gói":
+        return <ClockCircleOutlined className={styles.featureIcon} />;
+      case "Thời hạn sử dụng":
+        return <HourglassOutlined className={styles.featureIcon} />;
+      case "Tương thích mọi thiết bị":
+        return <MobileOutlined className={styles.featureIcon} />;
+      case "Hỗ trợ bảo hành":
+        return <SafetyOutlined className={styles.featureIcon} />;
+      case "Quà tặng":
+        return <GiftOutlined className={styles.featureIcon} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Container className={styles.container}>
       <Row>
@@ -18,7 +46,10 @@ const ServiceCards: React.FC = () => {
                 backgroundPosition: "center",
               }}
             >
-              <h2>{plan.title}</h2>
+              <div className={styles.titleWrapper}>
+                <CrownOutlined className={styles.crownIcon} />
+                <h2 className={styles.title}>{plan.title}</h2>
+              </div>
               <h3>{plan.price}</h3>
               <p>{plan.device}</p>
 
@@ -26,7 +57,12 @@ const ServiceCards: React.FC = () => {
               <ul className={styles.featureList}>
                 {plan.features1.map((feature, idx) => (
                   <li key={idx}>
-                    <span>{feature.text}</span>
+                    <span className={styles.featureItem}>
+                      <span className={styles.featureIcon}>
+                        {getFeatureIcon(feature.text)}
+                      </span>
+                      <span className={styles.featureText}>{feature.text}</span>
+                    </span>
                     {feature.included !== undefined ? (
                       <Image
                         src={
@@ -39,7 +75,9 @@ const ServiceCards: React.FC = () => {
                         height={20}
                       />
                     ) : (
-                      <span className={styles.detailText}>{feature.detail}</span>
+                      <span className={styles.detailText}>
+                        {feature.detail}
+                      </span>
                     )}
                   </li>
                 ))}
@@ -65,13 +103,17 @@ const ServiceCards: React.FC = () => {
                         height={20}
                       />
                     ) : (
-                      <span className={styles.detailText}>{feature.detail}</span>
+                      <span className={styles.detailText}>
+                        {feature.detail}
+                      </span>
                     )}
                   </li>
                 ))}
               </ul>
 
-              <Button className={styles.button}>Mua ngay</Button>
+              <Link href="/auth/login">
+              <Button  className={styles.button}>Mua ngay</Button>
+              </Link>
             </div>
           </Col>
         ))}
