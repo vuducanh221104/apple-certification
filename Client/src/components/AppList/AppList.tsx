@@ -4,18 +4,11 @@ import Image from 'next/image';
 import styles from './AppList.module.scss';
 import '@/styles/Global.scss'
 import Link from 'next/link';
+import { AppLists } from '@/types/client';
 
-// Định nghĩa kiểu dữ liệu của ứng dụng
-interface App {
-    id: number;
-    name: string;
-    package: string;
-    version: string;
-    size: string;
-    icon: string;
-}
 
-const apps: App[] = [
+
+const apps: AppLists[] = [
     {
         id: 1,
         name: 'Instagrammmmmmmmmmmmmmmmmmmmmmmmmm',
@@ -133,7 +126,7 @@ const apps: App[] = [
 export default function AppList() {
 
     // Chia danh sách thành từng nhóm 3 ứng dụng
-    const chunkedApps: App[][] = [];
+    const chunkedApps: AppLists[][] = [];
     for (let i = 0; i < apps.length; i += 3) {
         chunkedApps.push(apps.slice(i, i + 3));
     }

@@ -1,107 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Pagination } from "antd";
 import styles from "@/styles/Search.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { fetchApps } from "@/service/mockApi"; 
+import { AppComponents } from '@/types/client';
 
-const apps = [
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "CamScanner",
-    package: "com.intsig.camscanner",
-    rating: 4.8555,
-    icon: "",
-  },
-  {
-    name: "VivaVideo",
-    package: "com.quvideo.xiaoying",
-    rating: 4.7892,
-    icon: "",
-  },
-  {
-    name: "Video Star",
-    package: "com.frontrow.videostar",
-    rating: 4.6664,
-    icon: "",
-  },
-  { name: "Photomath", package: "com.photomath", rating: 4.7712, icon: "" },
-  { name: "TikTok", package: "com.musically.tiktok", rating: 4.7464, icon: "" },
-  { name: "VSCO", package: "com.vsco", rating: 4.6195, icon: "" },
-  {
-    name: "Notability",
-    package: "com.notability.app",
-    rating: 4.7523,
-    icon: "",
-  },
-  { name: "InShot", package: "com.inshot.video", rating: 4.8573, icon: "" },
-  { name: "SnapEdit", package: "com.snapedit.app", rating: 4.6509, icon: "" },
-  {
-    name: "Lightroom",
-    package: "com.adobe.lightroom",
-    rating: 4.7745,
-    icon: "",
-  },
-  {
-    name: "Snapchat",
-    package: "com.snapchat.android",
-    rating: 4.6618,
-    icon: "",
-  },
-  { name: "MADFUT 25", package: "com.madfut.fut", rating: 4.8842, icon: "" },
-];
-
-const App: React.FC = () => {
+const AppComponent: React.FC = () => {
+  const [apps, setApps] = useState<AppComponents[]>([]); 
   const [current, setCurrent] = useState(1);
-  const pageSize = 27; // Số ứng dụng hiển thị trên mỗi trang
+  const pageSize = 10;
 
-  // Tính toán các item cần hiển thị trên trang hiện tại
+  useEffect(() => {
+    const getApps = async () => {
+      const data = await fetchApps();
+      setApps(data);
+    };
+
+    getApps();
+  }, []);
+
   const startIndex = (current - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const displayedApps = apps.slice(startIndex, endIndex);
+
   return (
     <div className={styles.container}>
       <input
@@ -137,4 +62,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default AppComponent;

@@ -9,18 +9,10 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import "./side.scss";
 import Link from "next/link";
-
-// Định nghĩa kiểu dữ liệu
-interface Feature {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  icon: string;
-}
+import { SideFeatures } from "@/types/client";
 
 // Dữ liệu tính năng
-const features: Feature[] = [
+const features: SideFeatures[] = [
   {
     id: 1,
     title: "Sign IPA",

@@ -9,16 +9,7 @@ import "swiper/css/navigation";
 import "./update.scss";
 import Link from "next/link";
 import '@/styles/Global.scss'
-
-interface Update {
-  id: number;
-  img: string;
-  icon: string;
-  title: string;
-  description: string;
-  version: string;
-  size: string;
-}
+import {Update} from "@/types/client";
 
 const updates: Update[] = [
   {

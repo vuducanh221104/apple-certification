@@ -141,9 +141,7 @@
 
     .language {
         font-size: 22px;
-        border-top: 1px solid #ccc;
-    width: 100%;
-    padding: 10px 0;
+      
     }
 }
 
@@ -221,6 +219,12 @@
         cursor: pointer;
         color: #000;
         font-size: 32px;
+    }
+
+    .language {
+        border-top: 1px solid #ccc;
+        width: 100%;
+        padding: 10px 0;
     }
 }
 

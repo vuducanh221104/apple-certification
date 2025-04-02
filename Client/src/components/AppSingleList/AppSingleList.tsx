@@ -5,17 +5,10 @@ import styles from "./AppSingleList.module.scss";
 import '@/styles/Global.scss'
 import Link from "next/link";
 import clsx from "clsx"
+import { AppSingleLists } from "@/types/client";
 
-interface App {
-  id: number;
-  name: string;
-  package: string;
-  version: string;
-  size: string;
-  icon: string;
-}
 
-const apps: App[] = [
+const apps: AppSingleLists[] = [
   {
     id: 1,
     name: "Instagram",
