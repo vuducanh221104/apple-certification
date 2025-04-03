@@ -238,3 +238,49 @@ export const features: SideFeatures[] = [
     icon: "https://www.unkeyapp.com/svg/secure_w.svg",
   },
 ];
+
+// certificateHomePage
+export const arrayCertificate = [
+  {
+    id: 1,
+    title: "Ultimate",
+    price: "30.000 VND/ năm",
+    device: "Cho 1 thiết bị",
+    features: [
+      "Truy cập kho 10000+ ứng dụng",
+      "Tương thích iOS, iPadOS, Android",
+      "An toàn và bảo mật cao",
+      "Cài đặt và nhân bản không giới hạn",
+      "Thao tác nhanh chóng",
+    ],
+    note: "Chỉ một lần, trong vòng 180 ngày kể từ khi mua, do mất cắp thiết bị hoặc thay thế thiết bị thông qua Apple Care+, bạn có thể nhận chứng chỉ cho thiết bị mới của mình miễn phí. Sau khi thay thế, đơn hàng cũ sẽ hết hiệu lực và thiết bị mới sẽ được xem là gói Standard Plan.",
+  },
+  {
+    id: 1,
+    title: "Ultimate",
+    price: "30.000 VND/ năm",
+    device: "Cho 1 thiết bị",
+    features: [
+      "Truy cập kho 10000+ ứng dụng",
+      "Tương thích iOS, iPadOS, Android",
+      "An toàn và bảo mật cao",
+      "Cài đặt và nhân bản không giới hạn",
+      "Thao tác nhanh chóng",
+    ],
+    note: "Chỉ một lần, trong vòng 180 ngày kể từ khi mua, do mất cắp thiết bị hoặc thay thế thiết bị thông qua Apple Care+, bạn có thể nhận chứng chỉ cho thiết bị mới của mình miễn phí. Sau khi thay thế, đơn hàng cũ sẽ hết hiệu lực và thiết bị mới sẽ được xem là gói Standard Plan.",
+  },
+  {
+    id: 1,
+    title: "Ultimate",
+    price: "30.000 VND/ năm",
+    device: "Cho 1 thiết bị",
+    features: [
+      "Truy cập kho 10000+ ứng dụng",
+      "Tương thích iOS, iPadOS, Android",
+      "An toàn và bảo mật cao",
+      "Cài đặt và nhân bản không giới hạn",
+      "Thao tác nhanh chóng",
+    ],
+    note: "Chỉ một lần, trong vòng 180 ngày kể từ khi mua, do mất cắp thiết bị hoặc thay thế thiết bị thông qua Apple Care+, bạn có thể nhận chứng chỉ cho thiết bị mới của mình miễn phí. Sau khi thay thế, đơn hàng cũ sẽ hết hiệu lực và thiết bị mới sẽ được xem là gói Standard Plan.",
+  },
+];
