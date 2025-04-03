@@ -1,11 +1,11 @@
 .feature-black {
   background-color: var(--blackColor);
-  color: white;
+  color: var(--whiteColor);
 
   h3,
   p,
   button {
-    color: white;
+    color: var(--whiteColor);
   }
 
   button {
@@ -21,11 +21,11 @@
 }
 .feature-white {
   background-color: var(--whiteColor);
-  color: black;
+  color: var(--blackColor);
 
   h3,
   p {
-    color: black;
+    color: var(--blackColor);
   }
   button {
     background-size: 300% 100%;
@@ -36,7 +36,7 @@
       #2076f3,
       #0cabeb
     );
-    color: white;
+    color: var(--whiteColor);
   }
 }
 .feature-blue {
@@ -45,12 +45,12 @@
 
   h3,
   p {
-    color: white;
+    color: var(--whiteColor);
   }
 
   button {
-    background-color: white;
-    color: black;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
   }
 }
 .feature-white2 {
@@ -58,7 +58,7 @@
 
   h3,
   p {
-    color: black;
+    color: var(--blackColor);
   }
 
   button {
@@ -71,7 +71,7 @@
       #0cabeb
     );
 
-    color: white;
+    color: var(--whiteColor);
   }
 }
 .feature-purple {
@@ -79,21 +79,23 @@
 
   h3,
   p {
-    color: white;
+    color: var(--whiteColor);
   }
 }
 
-//////
+////////////////////////////////////////////////////////////////////////////////////////////
 
 .screenshot-carousel {
   text-align: center;
-  padding: 20px;
-  background-color: rgba(240, 240, 240, 0.655);
+  background-color: var(--backgroundColor);
   padding: 4rem 0;
+
+  .mySwiper {
+    margin: 0 15px;
+  }
 
   .swiper-wrapper {
     position: relative;
-    padding: 0 20px;
   }
 
   .swiper-slide {
@@ -140,7 +142,7 @@
     }
 
     .side-content {
-      color: var(--whitegroud);
+      color: var(--whiteColor);
       text-align: left;
       width: 100%;
       padding: 20px;
@@ -191,7 +193,7 @@
     margin-top: 20px; // Tạo khoảng cách giữa slider và nút
 
     button {
-      background: #fff;
+      background: var(--whiteColor);
       border: none;
       border-radius: 50%;
       width: 40px;

@@ -1,35 +1,71 @@
-.questionContainer {
-    background-color: var(--blackColor);
-    padding: 64px 0;
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 80px 16px;
+  font-family: "Arial", sans-serif;
+  color: var(--blackColor);
+}
 
-    .questionTitle {
-        font-size: 32px;
-        font-weight: 600;
-        color: var(--whiteColor);
-        margin-bottom: 40px;
-        padding: 0 16px;
-    }
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
 
-    .mySwiper {
-        padding: 0 10px;
-        margin-left: 10px;
-    }
+.subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  margin: 32px 8px;
+  font-weight: bold;
+}
 
-    .slideContent {
-        background-color: hsla(0, 0%, 100%, 0.14);
-        padding: 24px;
-        border-radius: 1.5rem;   
-        color: var(--whiteColor); 
-        min-height: 350px;
-        
-        .slideTitle {
-            font-size: 18px;
-            padding: 20px 0;
-        }
+.faqList {
+  display: flex;
+  flex-direction: column;
+}
 
-        .slideText {
-            font-size: 16px;
-            color: hsla(0, 0%, 100%, .7);
-        }
-    }
+.faqItem {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.text {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggleBtn img {
+  width: 24px; /* Điều chỉnh kích thước icon */
+  height: 24px;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease-in, opacity 0.6s ease-in-out,
+    padding 0.6s ease-in-out;
+}
+
+.answer.show {
+  max-height: 200px; // Giá trị lớn để đủ hiển thị nội dung
+  opacity: 1;
+  padding: 16px 0; // Thay đổi padding khi hiển thị
 }

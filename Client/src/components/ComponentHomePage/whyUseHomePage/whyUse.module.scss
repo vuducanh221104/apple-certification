@@ -1,0 +1,35 @@
+.questionContainer {
+    background-color: var(--blackColor);
+    padding: 64px 0;
+
+    .questionTitle {
+        font-size: 32px;
+        font-weight: 600;
+        color: var(--whiteColor);
+        margin-bottom: 40px;
+        padding: 0 16px;
+    }
+
+    .mySwiper {
+        padding: 0 10px;
+        margin-left: 10px;
+    }
+
+    .slideContent {
+        background-color: hsla(0, 0%, 100%, 0.14);
+        padding: 24px;
+        border-radius: 1.5rem;   
+        color: var(--whiteColor); 
+        min-height: 350px;
+        
+        .slideTitle {
+            font-size: 18px;
+            padding: 20px 0;
+        }
+
+        .slideText {
+            font-size: 16px;
+            color: hsla(0, 0%, 100%, .7);
+        }
+    }
+}

@@ -37,16 +37,17 @@ const SideFeature = () => {
       <Swiper
         modules={[Navigation]}
         slidesPerView={"auto"}
-        spaceBetween={30}
+        spaceBetween={20}
         loop={false}
+        className="mySwiper"
         navigation={{
           nextEl: ".custom-next",
           prevEl: ".custom-prev",
         }}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 15 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 25 },
+          768: { slidesPerView: 3, spaceBetween: 15 },
+          1024: { slidesPerView: 4, spaceBetween: 15 },
         }}
       >
         {features.map((feature, index) => (
