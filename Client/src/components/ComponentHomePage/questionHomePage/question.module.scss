@@ -11,7 +11,8 @@
     }
 
     .mySwiper {
-        margin: 0 30px;
+        padding: 0 10px;
+        margin-left: 10px;
     }
 
     .slideContent {
@@ -19,8 +20,7 @@
         padding: 24px;
         border-radius: 1.5rem;   
         color: var(--whiteColor); 
-
-        min-height: 300px;
+        min-height: 350px;
         
         .slideTitle {
             font-size: 18px;

@@ -9,51 +9,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import "./side.scss";
 import Link from "next/link";
-import { SideFeatures } from "@/types/client";
-
-// Dữ liệu tính năng
-const features: SideFeatures[] = [
-  {
-    id: 1,
-    title: "Sign IPA",
-    description:
-      "Cho phép người dùng tự tải lên và ký file IPA của riêng họ để cài đặt trên iPhone/iPad mà không cần jailbreak.",
-    image: "https://www.unkeyapp.com/images/screenshot1_2x.png",
-    icon: "https://www.unkeyapp.com/svg/application_w.svg",
-  },
-  {
-    id: 2,
-    title: "Báo cáo tình trạng IPA",
-    description:
-      "Báo cáo về các IPA đã được ký, giúp người dùng quản lý và theo dõi quá trình ký IPA hiểu quả và tiện lợi.",
-    image: "https://www.unkeyapp.com/images/screenshot2_2x.png",
-    icon: "https://www.unkeyapp.com/svg/source.svg",
-  },
-  {
-    id: 3,
-    title: "API hỗ trợ ký IPA",
-    description:
-      "Cho phép các lập trình viên và cộng tác viên sử dụng API để ký file IPA tự động thông qua hệ thống của UnkeyApp.",
-    image: "https://www.unkeyapp.com/images/screenshot3_2x.png",
-    icon: "https://www.unkeyapp.com/svg/sign.svg",
-  },
-  {
-    id: 4,
-    title: "Báo cáo tình trạng IPA",
-    description:
-      "Báo cáo về các IPA đã được ký, giúp người dùng quản lý và theo dõi quá trình ký IPA hiểu quả và tiện lợi.",
-    image: "https://www.unkeyapp.com/images/screenshot4_2x.png",
-    icon: "https://www.unkeyapp.com/svg/re_note.svg",
-  },
-  {
-    id: 5,
-    title: "Bảo mật và tối ưu",
-    description:
-      "Đảm bảo an toàn tuyệt đối cho các file IPA của người dùng khi tải lên và ký trên hệ thống nhanh chóng và mượt mà.",
-    image: "https://www.unkeyapp.com/images/screenshot5_2x.png",
-    icon: "https://www.unkeyapp.com/svg/secure_w.svg",
-  },
-];
+import {features} from "@/service/mockApi";
 
 // Màu sắc
 const colors = ["black", "white", "blue", "white2", "purple"];
@@ -82,7 +38,7 @@ const SideFeature = () => {
         modules={[Navigation]}
         slidesPerView={"auto"}
         spaceBetween={30}
-        loop={true}
+        loop={false}
         navigation={{
           nextEl: ".custom-next",
           prevEl: ".custom-prev",

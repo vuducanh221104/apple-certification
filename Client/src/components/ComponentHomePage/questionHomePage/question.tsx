@@ -17,9 +17,8 @@ const QuestionApp: React.FC = () => {
       <h2 className={styles.questionTitle}>Tại sao chọn UnKeyApp</h2>
       
       <Swiper
-        slidesPerView={1}
-        spaceBetween={30} 
-        loop={true} 
+        slidesPerView={1.5}
+        spaceBetween={20} 
         freeMode={true}
         pagination={{ clickable: true }}
         modules={[Pagination]}
