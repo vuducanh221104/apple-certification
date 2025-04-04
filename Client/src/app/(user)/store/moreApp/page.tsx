@@ -1,5 +1,5 @@
 'use client';
-import AppComponent from '@/components/AppComponent/AppComponent';
+import AppComponent from '@/components/App/AppComponent';
 import FooterSecond from '@/components/FooterSecond/FooterSecond';
 
 const App: React.FC = () => {

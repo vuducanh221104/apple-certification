@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Container } from "react-bootstrap";
-import styles from "./headerHomePage.module.scss"
+import styles from "./HeaderHomePage.module.scss"
 
 const HeaderHomePage = () => {
   return (

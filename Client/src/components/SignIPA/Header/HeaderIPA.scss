@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+    
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .header__logo {
+            display: flex ;
+                align-items: center;
+            .header__logo-image {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .header__button {
+            display: flex;
+            align-items: center;
+
+
+            .button__receive {
+                background-color: transparent;
+                color: var(--whiteColor);
+                border: 1px solid var(--whiteColor);
+                font-size: 14px;
+                padding: 10px 20px;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: var(--whiteColor);
+                    color: var(--blackColor);
+                }
+            }
+
+            .button__buyCert {
+                background-color: var(--colorButtonSign);
+                color: var(--whiteColor);
+                font-size: 14px;
+                padding: 10px 20px;
+                border-radius: 8px;
+                margin-left: 8px;
+                border: none;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+            
+        }
+    }
+}

@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import "./side.scss";
+import "./SideFeature.scss";
 import Link from "next/link";
 import {features} from "@/service/mockApi";
 

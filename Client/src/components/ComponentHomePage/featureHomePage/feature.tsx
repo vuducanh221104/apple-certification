@@ -1,10 +1,10 @@
 import React from 'react'
-import Side from '@/components/ComponentHomePage/featureHomePage/sideFeature/sideFeature'
+import SideFeature from './SideFeature/Side'
 
 function feature() {
   return (
     <div>
-      <Side />
+      <SideFeature />
     </div>
   )
 }

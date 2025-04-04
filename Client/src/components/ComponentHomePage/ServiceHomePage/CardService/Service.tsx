@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { serviceData } from "./serviceData";
 import { ServicePlan } from "@/types/client";
-import styles from "./styleService/serviceCard.module.scss";
+import styles from "./ServiceCard.module.scss";
 import Image from "next/image";
 import {
   ClockCircleOutlined,

@@ -6,5 +6,6 @@ import Footer from '@/components/Footer/Footer';
 export default function HideFooter() {
     const pathname = usePathname();
     if (pathname === '/login') return null; // Ẩn footer nếu ở trang login
+    if (pathname === '/signIPA') return null; // Ẩn footer nếu ở trang register
     return <Footer />;
 }

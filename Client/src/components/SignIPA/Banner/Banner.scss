@@ -1,0 +1,51 @@
+.banner {
+
+    .banner__contact {
+
+        .banner__link {
+            
+           .link {
+            color: var(--whiteColor);
+            font-size: 14px;
+
+            .banner-image {
+                margin-right: 10px;
+            }
+           }
+
+           h1 {
+            font-size: 48px;
+            color: var(--whiteColor);
+            font-weight: 600;
+            margin: 10px 0;
+           }
+
+           p {
+            color: var(--grayColor);
+            font-size: 18px;
+           }
+        }
+    }
+
+
+    .banner__certNew {
+        text-align: center;
+        p {
+            color: var(--whiteColor);
+            font-size: 12px;
+            background-color: rgb(14 159 110 );
+            padding: 0 10px;
+            margin: 0;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .banner__link {
+            color: var(--colorButtonSign);
+        }
+
+        .banner__certNew--time {
+            color: var(--grayColor);
+        }
+    }
+}

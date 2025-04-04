@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "sign.certvn.com",
+        pathname: "/css/**",
+      },
+      {
+        protocol: "https",
         hostname: "is1-ssl.mzstatic.com", // ✅ Thêm domain của ảnh
       },
       {
@@ -17,6 +22,7 @@ const nextConfig: NextConfig = {
         hostname: "sgp1.vultrobjects.com"
       }
     ],
+    domains: ['pub-347f55bb45354aa4b7fd847222ed02e7.r2.dev'],
   },
 };
 

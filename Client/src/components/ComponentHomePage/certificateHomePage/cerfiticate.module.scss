@@ -15,7 +15,8 @@
 }
 
 .slide {
-  flex-shrink: initial;
+  flex-shrink: initial !important;
+  width: 100%;
 }
 
 .slideContent {

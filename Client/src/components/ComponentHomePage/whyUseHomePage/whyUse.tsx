@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from 'swiper/modules';
-import styles from "./whyUse.module.scss";
+import styles from "./Use.module.scss";
 import {slides} from "@/service/mockApi"
 
 
