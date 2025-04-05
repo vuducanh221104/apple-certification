@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./Cert.scss";
 import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const apps = [
   { name: "Esign", image: "https://sign.certvn.com/css/esign-ico.png" },
@@ -20,7 +21,6 @@ const apps = [
 const Cert = () => {
   const [activeApp, setActiveApp] = useState<string | null>(null);
   const [showFileInput, setShowFileInput] = useState(false);
-
   const [fileName, setFileName] = useState("Không có tệp nào được chọn");
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,15 +32,34 @@ const Cert = () => {
   };
 
   return (
-    <div className="cert">
-      <div className="cert__choose">
-        <div>
-          <p>Lựa chọn App muốn cài</p>
-        </div>
+    <motion.div
+      className="cert"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="cert__choose"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <motion.p
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          Lựa chọn App muốn cài
+        </motion.p>
         <Row>
           {apps.map((app, index) => (
             <Col key={index} xs={4} sm={3} lg={2}>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
                 className={`cert__choose--button ${app.name
                   .toLowerCase()
                   .replace(" ", "")} ${activeApp === app.name ? "active" : ""}`}
@@ -54,39 +73,57 @@ const Cert = () => {
                   alt="logo"
                   className="cert__choose--image"
                 />
-              </button>
+              </motion.button>
             </Col>
           ))}
         </Row>
-      </div>
+      </motion.div>
 
-      <div className="cert__floderFile">
-        <p
+      <motion.div
+        className="cert__floderFile"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        <motion.p
           className="cert__floderFile--toggle"
+          whileHover={{ scale: 1.02 }}
           onClick={() => setShowFileInput(!showFileInput)}
         >
           Cần sign IPA khác?
-        </p>
+        </motion.p>
 
-        {/* hide/show */}
-        {showFileInput && (
-          <div className="fileInputWrapper">
-            <input
-              type="file"
-              id="fileUpload"
-              className="fileInput"
-              onChange={handleFileChange}
-            />
-            <label htmlFor="fileUpload" className="fileLabel">
-              Chọn tệp
-            </label>
-            <span className="fileName">{fileName}</span>
-          </div>
-        )}
-        {/*  */}
+        <AnimatePresence>
+          {showFileInput && (
+            <motion.div
+              className="fileInputWrapper"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <input
+                type="file"
+                id="fileUpload"
+                className="fileInput"
+                onChange={handleFileChange}
+              />
+              <label htmlFor="fileUpload" className="fileLabel">
+                Chọn tệp
+              </label>
+              <span className="fileName">{fileName}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <span>Chọn file ZIP chứa P12 và MobileProvision</span>
 
-        <div className="fileInputWrapper">
+        <motion.div
+          className="fileInputWrapper"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
           <input
             type="file"
             id="fileUpload"
@@ -97,22 +134,39 @@ const Cert = () => {
             Chọn tệp
           </label>
           <span className="fileName">{fileName}</span>
-        </div>
+        </motion.div>
 
-        <input
+        <motion.input
           type="password"
           className="passwordInput"
           placeholder="Nhập mật khẩu của tệp P12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
         />
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
           <p style={{ textDecoration: "none" }}>
             Tổng số lần ký: <span>1000</span>
           </p>
-        </div>
-        <button className="signButton">Sign Now !</button>
-      </div>
-    </div>
+        </motion.div>
+
+        <motion.button
+          className="signButton"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.4 }}
+        >
+          Sign Now !
+        </motion.button>
+      </motion.div>
+    </motion.div>
   );
 };
 

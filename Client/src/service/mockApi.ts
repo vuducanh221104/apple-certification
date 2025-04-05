@@ -312,3 +312,79 @@ export const arrayQuestion = [
       "Bạn có thể đăng nhập tài khoản của mình trên thiết bị khác, nhưng cần đảm bảo bạn có bản quyền hợp lệ trên thiết bị mới.",
   },
 ];
+
+// QuestionCheckIPA
+
+export const arrayQuestionContent = [
+  {
+    id: 1,
+    title: "Tôi vừa mua chứng chỉ xong, phải làm gì tiếp theo để cài?",
+    content:
+      "Sau khi kiểm tra đơn hàng, bạn sẽ cần cài ứng dụng ESign, sau đó nhập file chứng chỉ vào ESign để ký và cài các ứng dụng khác theo nhu cầu. Đừng lo, tôi đã chuẩn bị sẵn video hướng dẫn ở đây. Hãy xem để hiểu rõ hơn nhé!",
+  },
+  {
+    id: 2,
+    title: "Thời gian sử dụng bao lâu ?",
+    content: "Thời gian chứng chỉ của bạn sẽ từ 11 tháng đến 1 năm.",
+  },
+  {
+    id: 3,
+    title: "Chứng chỉ có thể dùng cho bao nhiêu máy vậy ?",
+    content:
+      "Mỗi máy sẽ có một mã UDID riêng biệt, vì vậy mỗi chứng chỉ bạn mua chỉ sử dụng duy nhất thiết bị mà bạn đã đăng kí UDID với chúng tôi. Nếu bạn đổi máy có thể bạn sẽ phải tạo chứng chỉ mới.",
+  },
+];
+
+//  PricingData for SignPrice
+import styles from "@/styles/signIPA/SignPrice.module.scss";
+export const pricingData = [
+  {
+    title: "Cert Free",
+    price: "Miễn phí",
+    desc: "Chứng chỉ này được chia sẻ bởi người dùng trên khắp thế giới nên sẽ không thể biết được chính xác khi nào sẽ có chứng chỉ mới !",
+    features: [
+      { text: "HSD: Thường chỉ sử dụng được vài ngày", invalid: false },
+      { text: "Không giới hạn thiết bị", invalid: false },
+      { text: "Chỉ dùng cài TrollX hoặc trải nghiệm", invalid: false },
+      { text: "Không thể dùng lâu dài", invalid: true }, // Invalid
+    ],
+    buttonText: "Tải chứng chỉ free",
+    buttonStyle: styles.free,
+    disabled: false,
+    priceColor: "#fff",
+  },
+  {
+    title: "Gói Thường",
+    price: "39.000đ",
+    desc: "Chứng chỉ được tạo sau 72h kể từ lúc mua",
+    features: [
+      { text: "HSD: 10 tháng", invalid: false },
+      { text: "Cài App không giới hạn", invalid: false },
+      { text: "1 thiết bị", invalid: false },
+      { text: "Bảo hành: 6 tháng", invalid: false },
+      { text: "Hướng dẫn, hỗ trợ cài", invalid: false },
+      { text: "KHÔNG HỖ TRỢ MÁY BYPASS", invalid: true }, // Invalid
+    ],
+    buttonText: "Hết hàng",
+    buttonStyle: styles.buttonDisabled,
+    disabled: true,
+    priceColor: "#22c55e",
+  },
+  {
+    title: "Gói Vip",
+    price: "99.000đ",
+    desc: "Chứng chỉ được tạo sau 24h kể từ lúc mua",
+    features: [
+      { text: "HSD: Hơn 11 tháng", invalid: false },
+      { text: "Cài App không giới hạn", invalid: false },
+      { text: "1 thiết bị", invalid: false },
+      { text: "Bảo hành: 10 tháng", invalid: false },
+      { text: "Hướng dẫn, hỗ trợ cài", invalid: false },
+      { text: "KHÔNG HỖ TRỢ MÁY BYPASS", invalid: true }, // Invalid
+    ],
+    buttonText: "MUA NGAY",
+    buttonStyle: styles.vip,
+    disabled: false,
+    priceColor: "#3b82f6",
+  },
+];

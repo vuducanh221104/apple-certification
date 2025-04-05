@@ -1,21 +1,15 @@
 import React from "react";
 import "./HeaderIPA.scss";
-import Image from "next/image";
 import Link from "next/link";
+import { HomeOutlined } from "@ant-design/icons";
 
 const HeaderIPA = () => {
   return (
     <div className="header">
       <div className="header__container">
-        <div className="header__logo">
-          <Link href="/signIPA" className="header__logo-link">
-            <Image
-              src="https://pub-347f55bb45354aa4b7fd847222ed02e7.r2.dev/logo.png"
-              alt="Logo"
-              width={70}
-              height={80}
-              className="header__logo-image"
-            />
+        <div className="header__home">
+          <Link href="/signIPA" className="header__home-link">
+          <HomeOutlined className="header__icon"/>
           </Link>
         </div>
         <div className="header__button">

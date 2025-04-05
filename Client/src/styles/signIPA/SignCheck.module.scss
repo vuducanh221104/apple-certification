@@ -38,6 +38,11 @@
     }
  }
 
+.check {
+    text-align: center;
+    padding: 50px 350px 0;
+}
+
  .checkButton {
     width: 100%;
     padding: 10px;
@@ -95,6 +100,12 @@
                 font-size: 24px;
             }
         }
+    }
+ }
+
+ @media (max-width: 1200px) {   
+    .check {
+        padding: 50px 20px 0;
     }
  }
 

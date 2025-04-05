@@ -3,15 +3,16 @@
     
     .header__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 10px 0;
 
-        .header__logo {
-            display: flex ;
-                align-items: center;
-            .header__logo-image {
-                width: 100%;
-                height: auto;
+        .header__home {
+            display: flex;
+            align-items: center;
+
+            .header__icon {
+                font-size: 20px;
+                color: var(--whiteColor);
             }
         }
 
@@ -51,3 +52,4 @@
         }
     }
 }
+
