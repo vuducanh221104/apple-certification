@@ -388,3 +388,24 @@ export const pricingData = [
     priceColor: "#3b82f6",
   },
 ];
+
+export const pricingData2 = [
+  {
+    title: "Gói SupperVip",
+    price: "169.000đ",
+    desc: "Nhận ngay chứng chỉ, không cần chờ đợi",
+    features: [
+      { text: "HSD: Hơn 11 tháng", invalid: false },
+      { text: "Cài App không giới hạn", invalid: false },
+      { text: "1 thiết bị", invalid: false },
+      { text: "Bảo hành: 10 tháng", invalid: false },
+      { text: "Hướng dẫn, hỗ trợ cài", invalid: false },
+      { text: "HỖ TRỢ MÁY BYPASS", invalid: true }, // Valid
+    ],
+    buttonText: "MUA NGAY",
+    buttonStyle: styles.VipPro,
+    disabled: false,
+    priceColor: "#eeba0b",
+    isFullWidth: true,
+  }
+]

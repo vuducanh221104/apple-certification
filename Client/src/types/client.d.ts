@@ -66,3 +66,17 @@ export interface AppComponents {
   rating: number;
   icon: string;
 }
+
+// PricingItem
+
+export interface PricingItem {
+  title: string;
+  price: string;
+  desc: string;
+  features: { text: string; invalid?: boolean }[];
+  buttonText: string;
+  buttonStyle: string;
+  disabled: boolean;
+  priceColor: string;
+  isFullWidth?: boolean; // << thêm dòng này
+}

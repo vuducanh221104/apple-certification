@@ -6,14 +6,15 @@ import styles from "@/styles/signIPA/SignPrice.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { pricingData } from "@/service/mockApi";
+import { pricingData , pricingData2 } from "@/service/mockApi";
+import { PricingItem } from "@/types/client";
 
 
+
+const pricingDataFull = [...pricingData, ...pricingData2];
 function pageSignPrice() {
   return (
-    <div
-      style={{ backgroundColor: "#000000", padding: "0 16px", color: "#fff" }}
-    >
+    <div style={{ backgroundColor: "#000000", padding: "0 16px", color: "#fff" }}>
       <HeaderSign />
 
       {/* head */}
@@ -24,10 +25,7 @@ function pageSignPrice() {
         transition={{ delay: 0.2 }}
       >
         <Link href="/tele" className={styles.headerLink}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className={styles.linkContent}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} className={styles.linkContent}>
             <Image
               src="https://www.unkeyapp.com/_next/image?url=%2Ficon%2Ftelegram.png&w=96&q=75"
               alt="Telegram"
@@ -39,9 +37,7 @@ function pageSignPrice() {
           </motion.div>
         </Link>
         <h1>Apple Certificate</h1>
-        <p>
-          Cung cấp chứng chỉ hoàn tự động. Hướng dẫn, bảo hành, sử dụng đầy đủ.
-        </p>
+        <p>Cung cấp chứng chỉ hoàn tự động. Hướng dẫn, bảo hành, sử dụng đầy đủ.</p>
         <button className={styles.buttonHeader}>
           Chứng chỉ là gì ?
           <div className={styles.headerImgIconContainer}>
@@ -84,16 +80,15 @@ function pageSignPrice() {
         <h2 className={styles.title}>Pricing</h2>
 
         <div className={styles.cardContainer}>
-          {pricingData.map((item, index) => (
-            <div key={index} className={styles.card}>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p
-                className={styles.cardPrice}
-                style={{ color: item.priceColor }}
-              >
-                {item.price}
-              </p>
-              <p className={styles.cardDesc}>{item.desc}</p>
+          {pricingDataFull.map((item: PricingItem, index) => (
+            <div key={index} className={`${styles.card} ${item.isFullWidth ? styles.fullWidth : ""}`}>
+              <div style={{ textAlign: "center" }}>
+                <h3 className={styles.cardTitle}>{item.title}</h3>
+                <p className={styles.cardPrice} style={{ color: item.priceColor }}>
+                  {item.price}
+                </p>
+                <p className={styles.cardDesc}>{item.desc}</p>
+              </div>
               <ul className={styles.cardFeatures}>
                 {item.features.map((feature, idx) => (
                   <li
