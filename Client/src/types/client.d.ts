@@ -80,3 +80,34 @@ export interface PricingItem {
   priceColor: string;
   isFullWidth?: boolean; // << thêm dòng này
 }
+
+// Dashboard
+export interface DashboardUser {
+  icon: string;
+  name: string;
+  email: string;
+  balance: string;
+}
+
+export interface UserInfo {
+  id: number;
+  children: {
+    id: number;
+    title: string;
+    icon: string;
+    path: string;
+    objects?: {
+      icon: string;
+      title: string;
+      content: string;
+      name?: string;
+      password?: string;
+      passwordOld?: string;
+      passwordNew?: string;
+      passwordConfirm?: string;
+      noteNo?: string;
+      noteYes?: string;
+      fix: string;
+    };
+  }[];
+}

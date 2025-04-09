@@ -1,0 +1,115 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 100vh;
+  max-width: 420px;
+  margin: 0 auto;
+  
+  .profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    
+    .avatarContainer {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      border: 2px solid #d1d5db;
+      
+      svg {
+        width: 50px;
+        height: 50px;
+        color: #9ca3af;
+      }
+    }
+    
+    .username {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .email {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    
+    .balance {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+  
+  .menuCard {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    
+    .menuItem {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      transition: background-color 0.2s;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #f9fafb;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        left: 3.5rem; 
+        right: 0rem;
+        bottom: 0;
+        height: 1px;
+        background-color: #e5e7eb;
+      }
+      
+      .iconContainer {
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .itemTitle {
+        flex: 1;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      
+      .chevron {
+        color: #9ca3af;
+        margin-left: 1rem;
+      }
+    }
+  }
+  
+  .sectionTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 1rem 0 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  .emptyDevices {
+    padding: 1.5rem;
+    text-align: center;
+    color: #4b5563;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+}

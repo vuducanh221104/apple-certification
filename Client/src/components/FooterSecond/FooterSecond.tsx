@@ -4,9 +4,27 @@ import Image from "next/image";
 import styles from "./FooterSecond.module.scss";
 import { Button } from "@mui/material";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const FooterSecond: React.FC = () => {
   const router = useRouter();
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth > 767);
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={styles.FooterSecond}>
       <div className={styles.content}>
@@ -38,10 +56,10 @@ const FooterSecond: React.FC = () => {
       </div>
       <div className={styles.imageContainer}>
         <Image
-          src="https://www.unkeyapp.com/images/mobile.png"
-          layout="fill" // Đảm bảo ảnh lấp đầy div cha
-          objectFit="fill" // Cắt ảnh để nó điền đầy không gian
-          alt="Mobile Logo"
+          src={isWideScreen ? "https://www.unkeyapp.com/images/app.png" : "https://www.unkeyapp.com/images/mobile.png"}
+          layout="fill"
+          objectFit="fill"
+          alt="App Preview"
         />
       </div>
     </div>

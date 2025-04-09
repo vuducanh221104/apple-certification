@@ -409,3 +409,116 @@ export const pricingData2 = [
     isFullWidth: true,
   }
 ]
+
+// Dashboard menu items
+export const dashboardMenuItems = [
+  {
+    id: 1,
+    title: "Edit Information",
+    icon: "userCard",
+    path: "/dashboard/edit-information",
+    type: "menu"
+  },
+  {
+    id: 2,
+    title: "Change Password",
+    icon: "lock",
+    path: "/dashboard/change-password",
+    type: "menu"
+  },
+  {
+    id: 3,
+    title: "Top Up",
+    icon: "wallet",
+    path: "/dashboard/top-up",
+    type: "menu"
+  },
+  {
+    id: 4,
+    title: "Transaction History",
+    icon: "clock",
+    path: "/dashboard/transaction-history",
+    type: "menu"
+  },
+  {
+    id: 5,
+    title: "Add Device",
+    icon: "mobile",
+    path: "/dashboard/add-device",
+    type: "action"
+  },
+  {
+    id: 6,
+    title: "Sign App",
+    icon: "app",
+    path: "/dashboard/sign-app",
+    type: "action"
+  },
+  {
+    id: 7,
+    title: "Recently Deleted",
+    icon: "trash",
+    path: "/dashboard/recently-deleted",
+    type: "settings"
+  },
+  {
+    id: 8,
+    title: "Settings",
+    icon: "settings",
+    path: "/dashboard/settings",
+    type: "settings"
+  },
+  {
+    id: 9,
+    title: "User Guides",
+    icon: "book",
+    path: "/dashboard/user-guides",
+    type: "settings"
+  },
+  {
+    id: 10,
+    title: "Contact Admin",
+    icon: "chat",
+    path: "/dashboard/contact-admin",
+    type: "settings"
+  },
+  {
+    id: 11,
+    title: "Report Bug",
+    icon: "bug",
+    path: "/dashboard/report-bug",
+    type: "settings"
+  }
+];
+
+export const fetchUserProfile = async () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({
+        name: "phuoc",
+        email: "phuoc123@gmail.com",
+        balance: "0 VND",
+        avatar: "",
+      });
+    }, 800);
+  });
+};
+
+export const fetchUserDevices = async () => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve([
+        // Empty array for demo, but structured with the correct types
+        // Example of device data structure, commented out for reference:
+        /*
+        {
+          id: "device-1",
+          name: "iPhone 13 Pro",
+          type: "ios",
+          addedDate: "2023-10-15"
+        }
+        */
+      ]);
+    }, 800);
+  });
+};

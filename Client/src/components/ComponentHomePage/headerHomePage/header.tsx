@@ -1,9 +1,32 @@
-import React from "react";
+'use client';
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Container } from "react-bootstrap";
 import styles from "./HeaderHomePage.module.scss"
 
 const HeaderHomePage = () => {
+  const [imageSrc, setImageSrc] = useState("https://www.unkeyapp.com/images/banner_2x.png");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 767) {
+        setImageSrc("https://www.unkeyapp.com/images/banner_4x.png");
+      } else {
+        setImageSrc("https://www.unkeyapp.com/images/banner_2x.png");
+      }
+    };
+
+    // Set initial image based on screen size
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className={styles.header}>
       <section className={styles.header__content}>
@@ -19,7 +42,7 @@ const HeaderHomePage = () => {
         </Container>
         <div className={styles.header__imageWrapper}>
           <Image
-            src="https://www.unkeyapp.com/images/banner_2x.png"
+            src={imageSrc}
             alt="logo"
             width={800}
             height={400}

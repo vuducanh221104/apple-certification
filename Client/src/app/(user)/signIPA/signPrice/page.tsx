@@ -6,23 +6,22 @@ import styles from "@/styles/signIPA/SignPrice.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { pricingData , pricingData2 } from "@/service/mockApi";
+import { pricingData, pricingData2 } from "@/service/mockApi";
 import { PricingItem } from "@/types/client";
 
-
-
 const pricingDataFull = [...pricingData, ...pricingData2];
+
 function pageSignPrice() {
   return (
     <div style={{ backgroundColor: "#000000", padding: "0 16px", color: "#fff" }}>
       <HeaderSign />
 
-      {/* head */}
+      {/* Header */}
       <motion.div
         className={styles.header}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+        transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
       >
         <Link href="/tele" className={styles.headerLink}>
           <motion.div whileHover={{ scale: 1.05 }} className={styles.linkContent}>
@@ -53,7 +52,13 @@ function pageSignPrice() {
       </motion.div>
 
       {/* Take UDID */}
-      <div className={styles.udidSection}>
+      <motion.div
+        className={styles.udidSection}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h2>
           Với <span>Chứng Chỉ</span> bạn có thể cài các app crack, game hack cực
           kì dễ dàng mà không cần phải Jailbreak.
@@ -66,22 +71,48 @@ function pageSignPrice() {
           Hãy tải cấu hình lấy udid dưới đây và cài đặt cấu hình bạn sẽ lấy được
           UDID của máy bạn.
         </p>
-        <div>
+        <motion.div whileHover={{ scale: 1.05 }}>
           <button>Lấy UDID ngay !</button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Pricing */}
-      <div className={styles.pricingSection}>
-        <p className={styles.subtitle}>
+      <motion.div
+        className={styles.pricingSection}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <motion.p
+          className={styles.subtitle}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           Năm 2024 đã có <span className={styles.orderCount}>467</span> Đơn hàng
           được tạo bởi certvn.com
-        </p>
-        <h2 className={styles.title}>Pricing</h2>
+        </motion.p>
+
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          Pricing
+        </motion.h2>
 
         <div className={styles.cardContainer}>
           {pricingDataFull.map((item: PricingItem, index) => (
-            <div key={index} className={`${styles.card} ${item.isFullWidth ? styles.fullWidth : ""}`}>
+            <motion.div
+              key={index}
+              className={`${styles.card} ${item.isFullWidth ? styles.fullWidth : ""}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <div style={{ textAlign: "center" }}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardPrice} style={{ color: item.priceColor }}>
@@ -104,10 +135,10 @@ function pageSignPrice() {
               <button className={item.buttonStyle} disabled={item.disabled}>
                 {item.buttonText}
               </button>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

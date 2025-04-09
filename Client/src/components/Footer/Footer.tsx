@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import images from '@/assets/images/index';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 
@@ -9,7 +8,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.logo}>
-                <Image src={images.logo} alt="Logo" width={92} height={64} />
+                <Image src="/img/logo.png" alt="Logo" width={92} height={64} />
             </div>
 
             <p className={styles.description}>

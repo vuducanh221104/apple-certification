@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import images from '@/assets/images/index';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -23,7 +22,13 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href="/" onClick={handleCloseMenu}>
-                    <Image src={images.logo} alt="Logo" width={48} height={32} />
+                    <Image 
+                        src="/img/logo.png" 
+                        alt="Logo" 
+                        width={60} 
+                        height={40}
+                        className={styles.logoImage}
+                    />
                 </Link>
             </div>
 
