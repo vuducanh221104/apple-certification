@@ -22,7 +22,8 @@ const nextConfig: NextConfig = {
         hostname: "sgp1.vultrobjects.com"
       }
     ],
-    domains: ['pub-347f55bb45354aa4b7fd847222ed02e7.r2.dev'],
+    domains: ['pub-347f55bb45354aa4b7fd847222ed02e7.r2.dev', 'payos.vn'],
+    
   },
 };
 

@@ -1,0 +1,295 @@
+.changePassword {
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--backgroundColor);
+  padding: 1rem;
+  
+
+  .container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+
+    .header {
+      background-color: var(--whiteColor);
+      padding: 15px;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    width: 50%;
+
+      .iconContainer {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        background-color: #f3f4f6;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #111827;
+        margin: 10px 0;
+      }
+
+      .balance {
+        color: #6b7280;
+        font-size: 1rem;
+      }
+    }
+
+    .contentWrapper {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .qrContainer,
+      .cardContainer {
+        flex: 1;
+        background-color: transparent;
+        border: 1px solid var(--grayColor);
+        margin: 25px;
+        padding: 25px;
+        border-radius: 1rem;
+        text-align: center;
+
+        h2 {
+          font-size: 20px;
+          padding: 0;
+          margin: 0;
+        }
+
+        p {
+          color: #6b7280;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .qrContainer {
+        .inputWrapper {
+          margin: 1rem 0;
+
+          .amountInput {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            outline: none;
+            text-align: center;
+
+            &:focus {
+              border-color: #2563eb;
+            }
+          }
+        }
+
+        .qrButton {
+          width: 100%;
+          padding: 13px;
+          background-color: #aaaaaa;
+          border: none;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          color: var(--whiteColor);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+
+            &:hover {
+                cursor: not-allowed;
+          }
+        }
+
+        .bankAccounts {
+          text-align: left;
+
+          .accountSection {
+            border-left: 1px #696969 dashed;
+            padding-left: 10px;
+
+            &:last-child {
+              border-bottom: none;
+              margin-bottom: 0;
+            }
+
+            h3 {
+              font-size: 12px;
+              color: #6b7280;
+              margin-bottom: 0.5rem;
+            }
+
+            .amount {
+              font-size: 20px;
+              font-weight: 600;
+              border-left: 3px var(--colorButtonSign) solid;
+              margin: 0 0 0 -12px;
+              padding-left: 10px;
+            }
+
+            .banks {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              img {
+                width: 20px;
+                height: 20px;
+                border-radius: 4px;
+              }
+
+              span {
+                color: #6b7280;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      .cardContainer {
+        h2 {
+          font-size: 20px;
+          padding: 0;
+          margin: 0;
+        }
+
+        .warning {
+          color: #ef4444;
+          font-weight: 500;
+          font-size: 20px;
+          text-decoration: underline;
+          margin: 0;
+        }
+
+        .warning2 {
+          color: #ef4444;
+          font-weight: 500;
+          font-size: 20px;
+          margin: 0;
+        }
+
+        p {
+          margin-bottom: 30px;
+          margin-top: 10px;
+          padding: 0;
+        }
+
+        .cardForm {
+          margin: 1rem 0;
+
+          .inputGroup {
+            margin-bottom: 1rem;
+
+            .cardInput {
+              width: 100%;
+              padding: 0.75rem;
+              border: 1px solid #d1d5db;
+              border-radius: 0.5rem;
+              font-size: 1rem;
+              outline: none;
+              background: var(--whiteColor);
+
+              &::placeholder {
+                color: #9ca3af;
+              }
+
+              &:focus {
+                border-color: var(--colorButtonSign);
+              }
+            }
+          }
+
+          .submitButton {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #6b7280;
+            border: none;
+            border-radius: 0.5rem;
+            color: var(--whiteColor);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            &:hover {
+              background-color: #4b5563;
+            }
+          }
+        }
+
+        .cardOptions {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+
+          .cardOption {
+            width: 100%;
+            padding: 5px;
+            background-color: #374151;
+            border: none;
+            border-radius: 0.5rem;
+            color: var(--whiteColor);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+              opacity: 0.9;
+            }
+
+            &.selected {
+              background-color: #2563eb;
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .changePassword {
+    .container {
+      .contentWrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 640px) {
+  .editInfo {
+    padding: 1rem;
+
+    .container {
+      padding: 1.5rem;
+
+      .title {
+        font-size: 1.25rem;
+      }
+
+      .subtitle {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

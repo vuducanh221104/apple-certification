@@ -416,42 +416,42 @@ export const dashboardMenuItems = [
     id: 1,
     title: "Edit Information",
     icon: "userCard",
-    path: "/dashboard/edit-information",
+    path: "/dashboard/editInfo",
     type: "menu"
   },
   {
     id: 2,
     title: "Change Password",
     icon: "lock",
-    path: "/dashboard/change-password",
+    path: "/dashboard/changePassword",
     type: "menu"
   },
   {
     id: 3,
     title: "Top Up",
     icon: "wallet",
-    path: "/dashboard/top-up",
+    path: "/dashboard/topup",
     type: "menu"
   },
   {
     id: 4,
     title: "Transaction History",
     icon: "clock",
-    path: "/dashboard/transaction-history",
+    path: "/dashboard/history",
     type: "menu"
   },
   {
     id: 5,
     title: "Add Device",
     icon: "mobile",
-    path: "/dashboard/add-device",
+    path: "/dashboard/addDevice",
     type: "action"
   },
   {
     id: 6,
     title: "Sign App",
     icon: "app",
-    path: "/dashboard/sign-app",
+    path: "/dashboard/signApp",
     type: "action"
   },
   {
@@ -459,7 +459,7 @@ export const dashboardMenuItems = [
     title: "Recently Deleted",
     icon: "trash",
     path: "/dashboard/recently-deleted",
-    type: "settings"
+    type: "delete"
   },
   {
     id: 8,

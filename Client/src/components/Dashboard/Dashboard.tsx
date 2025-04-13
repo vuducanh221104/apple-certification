@@ -102,7 +102,7 @@ const Dashboard = () => {
           <p className={styles.balance}>Balance: {profile.balance}</p>
         </div>
       )}
-
+      {/* 1 */}
       <div className={styles.menuCard}>
         {dashboardMenuItems
           .filter(item => item.type === "menu")
@@ -132,7 +132,7 @@ const Dashboard = () => {
             </Link>
           ))}
       </div>
-
+          {/* 2 */}
       <div className={styles.menuCard}>
         {dashboardMenuItems
           .filter(item => item.type === "action")
@@ -163,42 +163,72 @@ const Dashboard = () => {
           ))}
       </div>
 
+      {/* 3 */}
       <h3 className={styles.sectionTitle}>REGISTERED DEVICES</h3>
-
-      <div className={styles.menuCard}>
-        {devices.length === 0 ? (
-          <div className={styles.emptyDevices}>
-            You have not registered any devices.
-          </div>
-        ) : (
-          devices.map((device) => (
-            <div key={device.id} className={styles.menuItem}>
-              <div className={styles.iconContainer}>
-                <MobileIcon />
-              </div>
-              <span className={styles.itemTitle}>{device.name}</span>
-              <span className={styles.chevron}>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 18L15 12L9 6"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-          ))
-        )}
+<div className={styles.menuCard}>
+  {devices.length === 0 ? (
+    <div className={styles.emptyDevices}>
+      You have not registered any devices.
+    </div>
+  ) : (
+    devices.map((device) => (
+      <div key={device.id} className={styles.menuItem}>
+        <div className={styles.iconContainer}>
+          <MobileIcon />
+        </div>
+        <span className={styles.itemTitle}>{device.name}</span>
+        <span className={styles.chevron}>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 18L15 12L9 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
       </div>
+    ))
+  )}
 
+  {/* Dashboard Menu Items - type: delete */}
+  {dashboardMenuItems
+    .filter((item) => item.type === "delete")
+    .map((item) => (
+      <Link href={item.path} key={item.id}>
+        <div className={styles.menuItem}>
+          <div className={styles.iconContainer}>{getIcon(item.icon)}</div>
+          <span className={styles.itemTitle}>{item.title}</span>
+          <span className={styles.chevron}>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+        </div>
+      </Link>
+    ))}
+</div>
+
+        {/* 4 */}
       <div className={styles.menuCard}>
         {dashboardMenuItems
           .filter(item => item.type === "settings")
