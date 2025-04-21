@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import styles from "./screenShot.module.scss";
+import styles from "./Screenshot.module.scss";
 
 const screenshots = [
   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e5/b6/71/e5b671cd-35e9-ac95-1536-95662a7ed8da/86d98c10-0014-4bcb-89a5-39c7776e014e_1_GroupChat_Tile_EN_5-5.png/392x696bb.png",

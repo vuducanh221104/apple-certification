@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "@/styles/dasboard/editInfo.module.scss";
+import styles from "@/styles/dasboard/EditInfo.module.scss";
 
 const EditInfo = () => {
   const [formData, setFormData] = useState({

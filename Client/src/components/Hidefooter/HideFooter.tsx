@@ -12,7 +12,7 @@ export default function HideFooter() {
     if (pathname === '/dashboard') return null; // Ẩn footer nếu ở trang register
     if (pathname === '/dashboard/editInfo') return null; // Ẩn footer nếu ở trang register
     if (pathname === '/dashboard/changePassword') return null; // Ẩn footer nếu ở trang register
-    if (pathname === '/auth/register') return null; // Ẩn footer nếu ở trang register
+    if (pathname === '/authregister') return null; // Ẩn footer nếu ở trang register
     if (pathname === '/auth/login') return null; // Ẩn footer nếu ở trang register
     return <Footer />;
 }

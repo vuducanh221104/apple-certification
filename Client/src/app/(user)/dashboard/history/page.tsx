@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/dasboard/history.module.scss";
+import styles from "@/styles/dasboard/History.module.scss";
 import { InboxOutlined } from "@ant-design/icons";
 
 const HistoryPage = () => {

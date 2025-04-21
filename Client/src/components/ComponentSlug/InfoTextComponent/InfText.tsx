@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./info.module.scss";
+import styles from "./InfText.module.scss";
 
 function infoText() {
   const info = {

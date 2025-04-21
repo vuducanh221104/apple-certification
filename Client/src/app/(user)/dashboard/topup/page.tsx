@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import styles from "@/styles/dasboard/topup.module.scss";
+import styles from "@/styles/dasboard/Topup.module.scss";
 import Image from "next/image";
 
 const TopupPage = () => {

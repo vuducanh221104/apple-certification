@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"; // Dùng 'next/navigation' thay vì
 import styles from "@/styles/Store.module.scss";
 import Image from "next/image";
 import images from "@/assets/images";
-import UpdatesSection from "@/components/Update/update";
+import UpdatesSection from "@/components/Updated/Update";
 import FooterSecond from "@/components/FooterSecond/FooterSecond";
 import AppList from "@/components/AppList/AppList";
 import AppSingleList from "@/components/AppSingleList/AppSingleList";

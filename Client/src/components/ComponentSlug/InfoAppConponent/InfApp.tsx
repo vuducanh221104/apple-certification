@@ -1,4 +1,4 @@
-import styles from "./infoApp.module.scss"
+import styles from "./InfApp.module.scss"
 import Image from "next/image";
 import { Container, Row, Col, Button } from "react-bootstrap";
 

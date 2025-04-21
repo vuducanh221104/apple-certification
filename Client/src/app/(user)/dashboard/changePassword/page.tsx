@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/dasboard/changePassword.module.scss";
+import styles from "@/styles/dasboard/ChangePassword.module.scss";
 
 const ChangePassword = () => {
   return (

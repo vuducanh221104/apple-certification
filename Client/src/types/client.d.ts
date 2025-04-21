@@ -1,3 +1,34 @@
+export interface DashboardMenuItem {
+  id: number;
+  title: string;
+  icon: string;
+  path: string;
+} 
+
+export interface UserProfileType {
+    name: string;
+    email: string;
+    balance: string;
+    avatar: string;
+  }
+  
+  export interface DeviceType {
+    id: string;
+    name: string;
+    type: string;
+    addedDate: string;
+  }
+
+export interface Update {
+    id: number;
+    img: string;
+    icon: string;
+    title: string;
+    description: string;
+    version: string;
+    size: string;
+}
+
 // Feature
 
 export interface Feature {
