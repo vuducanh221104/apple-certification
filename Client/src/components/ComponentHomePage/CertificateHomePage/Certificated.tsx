@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import styles from "./Cerfiticate.module.scss";
+import styles from "./Certificate.module.scss";
 import { arrayCertificate } from "@/service/mockApi";
 import Image from "next/image";
 

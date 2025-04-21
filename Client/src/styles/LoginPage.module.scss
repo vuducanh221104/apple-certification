@@ -11,14 +11,14 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 2.5rem;
         background-color: #fff;
         height: 100vh;
         overflow-y: auto; /* Cho phép cuộn form đăng nhập */
        
 
         .title {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--background);
         }
@@ -27,7 +27,7 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
             font-size: 14px;
             font-weight: 400;
             color: #ccc;
-            margin: 20px 0;
+            margin: 20px 0 30px;
         }
         .inputField {
             width: 100%;
@@ -35,6 +35,58 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
 
             :global(.MuiOutlinedInput-root) {
                 border-radius: 0.75rem !important;
+            }
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            a {
+                color: var(--primaryColor);
+            }
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 0.75rem;
+        }
+
+        .google-login {
+            width: 100%;
+            padding: 12px;
+            border-radius: 0.75rem; 
+            border: 1px solid #e8e8e8;
+            color: var(--blackColor);
+            font-weight: 600;
+
+            &:hover {
+                color: var(--primaryColor); 
+            }
+
+            .googleIcon {
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                text-align: center;
+            }
+        }
+
+        .register {
+            text-align: center;
+    margin: 70px 0 0;
+    font-size: 16px;
+
+            .register-link {
+                color: var(--primaryColor);
+
+                &:hover {
+                    opacity: 0.8;   
+                }
             }
         }
     }
@@ -54,7 +106,7 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
         top: 0;
         bottom: 0;
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             display: none; /* Ẩn trên mobile */
         }
 
@@ -69,7 +121,7 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .login-container {
         display: block; /* Hiển thị dạng block */
     }

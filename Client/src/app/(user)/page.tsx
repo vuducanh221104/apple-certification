@@ -1,11 +1,10 @@
-
 import React from 'react'
 import HeaderHomePage from '@/components/ComponentHomePage/HeaderHomePage/Header'
 import FeatureOutStading from '@/components/ComponentHomePage/FeatureHomePage/Feature'
-import Service from '@/components/ComponentHomePage/ServiceHomePage/Service'
-import WhyUse from '@/components/ComponentHomePage/WhyUseHomePage/WhyUse'
-import Cerfitication from '@/components/ComponentHomePage/CertificateHomePage/Certificate'
-import Question from '@/components/ComponentHomePage/QuestionHomePage/Question'
+import ServiceHome from '@/components/ComponentHomePage/ServiceHomePage/Service'
+import WhyUseHome from '@/components/ComponentHomePage/WhyUseHomePage/WhyUse'
+import CerfiticationHome from '@/components/ComponentHomePage/CertificateHomePage/Certificated'
+import QuestionHome from '@/components/ComponentHomePage/QuestionHomePage/Question'
 import FooterSecond from '@/components/FooterSecond/FooterSecond'
 
 const PageHome = () => {
@@ -13,10 +12,10 @@ const PageHome = () => {
     <div>
         <HeaderHomePage />
         <FeatureOutStading />
-        <Service />
-        <WhyUse />
-        <Cerfitication />
-        <Question />
+        <ServiceHome />
+        <WhyUseHome />
+        <CerfiticationHome />
+        <QuestionHome />
         <FooterSecond />
     </div>
   )

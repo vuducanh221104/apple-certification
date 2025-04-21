@@ -1,6 +1,6 @@
 
 import React from 'react'
-import ServiceCard from './CardService/Service'
+import ServiceCard from './CardService/ServiceCard'
 
 const service = () => {
     return (
