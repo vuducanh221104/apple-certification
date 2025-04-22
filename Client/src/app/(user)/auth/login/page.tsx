@@ -73,7 +73,7 @@ export default function LoginPage() {
 
         <Typography className={styles.register}>
           Bạn chưa có tài khoản?{" "}
-          <Link href="/register" className={styles["register-link"]}>
+          <Link href="/auth/register" className={styles["register-link"]}>
             Đăng ký ngay
           </Link>
         </Typography>

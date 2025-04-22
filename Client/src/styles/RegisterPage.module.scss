@@ -16,18 +16,22 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
     height: 100vh;
     overflow-y: auto; /* Cho phép cuộn form đăng nhập */
 
+    .icon {
+        font-size: 20px;
+        margin-right: 10px;
+
+        &:hover {
+            color: var(--primaryColor);
+            cursor: pointer;
+        }
+    }
+
     .title {
       font-size: 32px;
       font-weight: 700;
       color: var(--background);
     }
 
-    .subtitle {
-      font-size: 14px;
-      font-weight: 400;
-      color: #ccc;
-      margin: 20px 0 30px;
-    }
     .inputField {
       width: 100%;
       margin: 20px 0;
@@ -39,12 +43,16 @@ $gradient-bg: linear-gradient(to right, #007bff, #0056b3);
 
     .options {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
 
+      label {
+        margin-right: 5px;
+      }
+
       a {
         color: var(--primaryColor);
+        font-size: 16px;
       }
     }
 
