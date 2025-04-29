@@ -1,0 +1,126 @@
+.container {
+  margin: 0 auto;
+  padding: 2rem 10rem;
+  background-color: var(--backgroundColor);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .headerIcon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--greenColor);
+    padding: 10px;
+    border-radius: 12px;
+
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #333;
+    font-weight: 600;
+  }
+
+  p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.tutorialSection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+
+.tutorialList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tutorialItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #eee;
+
+  &:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+  }
+
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--blueColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+
+    &.iconWrapper1 {
+      background: blue;
+    }
+
+    &.iconWrapper2 {
+      background: #8e8e93;
+    } 
+
+    &.iconWrapper3 {
+      background: rgb(13, 144, 219);
+    }
+
+    &.iconWrapper4 {
+      background: green;
+    }
+  }
+  span {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .iconRight {
+    margin-left: auto;
+    color: var(--blueColor);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 4rem;
+  }
+} 
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 0.5rem;
+  }
+}
+

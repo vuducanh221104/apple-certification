@@ -416,77 +416,77 @@ export const dashboardMenuItems = [
     id: 1,
     title: "Edit Information",
     icon: "userCard",
-    path: "/dashboard/editInfo",
+    path: "settings/editInfo",
     type: "menu"
   },
   {
     id: 2,
     title: "Change Password",
     icon: "lock",
-    path: "/dashboard/changePassword",
+    path: "settings/changePassword",
     type: "menu"
   },
   {
     id: 3,
     title: "Top Up",
     icon: "wallet",
-    path: "/dashboard/topup",
+    path: "settings/topup",
     type: "menu"
   },
   {
     id: 4,
     title: "Transaction History",
     icon: "clock",
-    path: "/dashboard/history",
+    path: "settings/history",
     type: "menu"
   },
   {
     id: 5,
     title: "Add Device",
     icon: "mobile",
-    path: "/dashboard/addDevice",
-    type: "action"
+    path: "settings/addDevice",
+    type: "action",
   },
   {
     id: 6,
     title: "Sign App",
     icon: "app",
-    path: "/dashboard/signApp",
-    type: "action"
+    path: "settings/signApp",
+    type: "action",
   },
   {
     id: 7,
     title: "Recently Deleted",
     icon: "trash",
-    path: "/dashboard/recently-deleted",
+    path: "settings/recentDeleted",
     type: "delete"
   },
   {
     id: 8,
     title: "Settings",
     icon: "settings",
-    path: "/dashboard/settings",
+    path: "settings/setting",
     type: "settings"
   },
   {
     id: 9,
     title: "User Guides",
     icon: "book",
-    path: "/dashboard/user-guides",
+    path: "settings/tutorial",
     type: "settings"
   },
   {
     id: 10,
     title: "Contact Admin",
     icon: "chat",
-    path: "/dashboard/contact-admin",
+    path: "settings/contact",
     type: "settings"
   },
   {
     id: 11,
     title: "Report Bug",
     icon: "bug",
-    path: "/dashboard/report-bug",
+    path: "settings/",
     type: "settings"
   }
 ];
@@ -501,7 +501,7 @@ export const fetchUserProfile = async () => {
         avatar: "",
       });
     }, 800);
-  });
+  }); 
 };
 
 export const fetchUserDevices = async () => {
@@ -522,3 +522,28 @@ export const fetchUserDevices = async () => {
     }, 800);
   });
 };
+
+// SignApp
+ 
+export const AppOptionApi = [
+  {
+    id: 'esign',
+    name: 'Esign',
+    icon: 'https://sign.certvn.com/css/esign-ico.png'
+  },
+  {
+    id: 'gbox',
+    name: 'Gbox',
+    icon: 'https://sign.certvn.com/css/gbox-ico.png'
+  },
+  {
+    id: 'scarlet',
+    name: 'Scarlet',
+    icon: 'https://sign.certvn.com/css/scarlet-ico.png'
+  },
+  {
+    id: 'youtube',
+    name: 'Youtube',
+    icon: 'https://sign.certvn.com/css/youtube.png'
+  }
+]

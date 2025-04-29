@@ -142,3 +142,10 @@ export interface UserInfo {
     };
   }[];
 }
+
+// SignApp
+export interface AppOption {
+  id: string;
+  name: string;
+  icon: string;
+}
